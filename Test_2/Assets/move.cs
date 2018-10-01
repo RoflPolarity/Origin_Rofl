@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class move : MonoBehaviour {
-    public GameObject player;
-    public int speed = 5;
-    public int speedRotation = 3;
-    // Use this for initialization
-    void Start () {
-        player = (GameObject)this.gameObject;
+    public float horizantalSpeed, verticalSpeed;
+    float speedX, speedY;
+    void Start() {
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-           
-        }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-           
-        }
+
+    void Update() {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            player.transform.position += player.transform.forward * speed * Time.deltaTime;
+            speedX = -horizantalSpeed;
         }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            player.transform.position -= player.transform.forward * speed * Time.deltaTime;
+            speedX = horizantalSpeed;
         }
-    }
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            speedY = verticalSpeed;
+        }
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            speedY = -verticalSpeed;
+        }
+        transform.Translate(speedX, speedY, 0);
+        speedX = 0;
+        speedY = 0;
+}
 }
