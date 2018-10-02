@@ -1,5 +1,6 @@
 C:\Users\Immor\Documents\GitHub\Origin_Rofl\Test_2\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
 C:\Users\Immor\Documents\GitHub\Origin_Rofl\Test_2\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
 C:\Users\Leva\Documents\GitHub\Origin_Rofl\Test_2\Temp\bin\Debug\Assembly-CSharp.dll
 C:\Users\Leva\Documents\GitHub\Origin_Rofl\Test_2\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\Users\Leva\Documents\GitHub\Origin_Rofl\Test_2\Temp\bin\Debug\Boo.Lang.dll
@@ -168,3 +169,5 @@ C:\Users\Leva\Documents\GitHub\Origin_Rofl\Test_2\obj\Debug\Assembly-CSharp.cspr
 C:\Users\Leva\Documents\GitHub\Origin_Rofl\Test_2\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Leva\Documents\GitHub\Origin_Rofl\Test_2\obj\Debug\Assembly-CSharp.dll
 C:\Users\Leva\Documents\GitHub\Origin_Rofl\Test_2\obj\Debug\Assembly-CSharp.pdb
+=======
+>>>>>>> 6ae119edf221d36fed84aba50711bb8eabaf9ff3
