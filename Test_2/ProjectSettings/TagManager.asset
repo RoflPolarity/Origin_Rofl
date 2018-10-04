@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: window_light
+    uniqueID: 2317756153
+    locked: 0

@@ -1,3 +1,17 @@
 Base path: D:/юнити/Editor/Data
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=4228 outsize=2726 ok=1
+Cmd: preprocess
+  insize=2860 outsize=1748 ok=1
+Cmd: preprocess
+  insize=7044 outsize=4798 ok=1
+Cmd: preprocess
+  insize=4309 outsize=2396 ok=1
+Cmd: preprocess
+  insize=2692 outsize=1763 ok=1
+Cmd: preprocess
+  insize=1330 outsize=315 ok=1
+Cmd: preprocess
+  insize=4386 outsize=2911 ok=1
 Cmd: initializeCompiler
