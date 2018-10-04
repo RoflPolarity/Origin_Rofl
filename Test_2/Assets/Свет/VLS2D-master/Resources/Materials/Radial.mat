@@ -32,7 +32,7 @@ Material:
     - _Fade_copy: 0.42857143
     - _Fade_copy_copy: 0.5
     - _Intensity: 1
-    - _RotationSpeed: 1
+    - _RotationSpeed: 0
     - _node_3388: 1
     - _node_3388_copy: 1
     - _node_4537: 10
