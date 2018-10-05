@@ -2,31 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E : MonoBehaviour {
-    public GameObject Obj;
-    public string NameFunk;
-    void Start () {
-    }
-	void OnTriggerEnter (Collider mane_char)
+public class E : MonoBehaviour
+{
+    private MeshRenderer Render;
+    void Start()
     {
-       // Obj = GetComponent<MeshRenderer>().enabled;
-        if (mane_char.tag == "Player")
+        Render = GetComponentInChildren<MeshRenderer>();
+    }
+    void Update()
+    { }
+
+        void OnTriggerStay2D(Collider2D mane_char)
         {
-            Debug.Log("Privet");
-            // if (Input.GetKeyDown(KeyCode.E))
-            //{
-            //if (Obj == true)
-            //{
-              //  Obj = false;
+            if (mane_char.tag == "char")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Render.enabled = !Render.enabled;
+                }
             }
-           
         }
-    void OnTriggerStay (Collider mane_char)
-    {
-        if (mane_char.tag == "Player")
-        {
-            Debug.Log("Privet");
-        }
-    }
-        //}
-    }
+  }
