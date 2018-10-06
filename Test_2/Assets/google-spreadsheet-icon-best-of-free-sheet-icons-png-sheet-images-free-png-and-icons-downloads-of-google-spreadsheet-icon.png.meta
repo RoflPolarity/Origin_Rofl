@@ -1,0 +1,477 @@
+fileFormatVersion: 2
+guid: eb4d2488f77d05e4e83b74b771afc406
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_0
+    21300002: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_1
+    21300004: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_2
+    21300006: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_3
+    21300008: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_4
+    21300010: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_5
+    21300012: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_6
+    21300014: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_7
+    21300016: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_8
+    21300018: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_9
+    21300020: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_10
+    21300022: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_11
+    21300024: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_12
+    21300026: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_13
+    21300028: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_14
+    21300030: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_15
+    21300032: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_16
+    21300034: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_17
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1845
+        width: 353
+        height: 453
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b133327977a4f049a34219ab7ebc9d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_1
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1845
+        width: 329
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0aaae29f0192b44dbeea47c03fe0682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_2
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 1845
+        width: 357
+        height: 453
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faae32e4fecd5cd4b9592a132fdedf3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_3
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1845
+        width: 328
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459e97bbae498a742ae7b9d677bc25b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1603
+        width: 6
+        height: 96
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f53472ae4c3604cbc7dcfbfa50f3b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_5
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1240
+        width: 352
+        height: 460
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014dd6eb7b0b43f4387302e6a21b5ae4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_6
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1240
+        width: 329
+        height: 433
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727ff6f26f6800d41bfdf3f0a3249efb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_7
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 1236
+        width: 357
+        height: 459
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda210e6b3a972d4e9b72c8705346e0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_8
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1245
+        width: 328
+        height: 428
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5d85fd1a0588c4aa7e95ba6bd701da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_9
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 669
+        width: 304
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a040fad55b89fdc41a85c727a75a156a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_10
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 669
+        width: 303
+        height: 405
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f38e9ec472f7eb439c84ed478cb0804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_11
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 669
+        width: 303
+        height: 429
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62707705b0283d542b586a61b24d1ab4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_12
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 669
+        width: 304
+        height: 405
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89cda85cad45fb48a3262119570ec1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_13
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 70
+        width: 304
+        height: 403
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d44d8269c979a468fbe6b9d5bd23e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_14
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 70
+        width: 303
+        height: 428
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d94c699a856a54ab9de330646cff9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_15
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 70
+        width: 305
+        height: 403
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c0cf24bc39438479fe7745d336d6c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 70
+        width: 5
+        height: 303
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aebf833833cbd48819ebc59b8c11c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: google-spreadsheet-icon-best-of-free-sheet-icons-png-sheet-images-free-png-and-icons-downloads-of-google-spreadsheet-icon_17
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 70
+        width: 307
+        height: 428
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c13036423ea124c9f24da353535270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 430c79327df37bd4280b1a08336e7cc5
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
