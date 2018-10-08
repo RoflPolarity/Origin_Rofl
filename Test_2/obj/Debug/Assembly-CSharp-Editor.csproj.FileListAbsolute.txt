@@ -1,0 +1,2 @@
+C:\Users\Immor\Documents\GitHub\Origin_Rofl\Test_2\obj\Debug\Assembly-CSharp-Editor.csprojAssemblyReference.cache
+C:\Users\Immor\Documents\GitHub\Origin_Rofl\Test_2\obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache

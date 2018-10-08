@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\E.cs" />
     <Compile Include="Assets\move.cs" />
+    <Compile Include="Assets\VLSObstructor.cs" />
     <Compile Include="Assets\Свет\VLS2D-master\_SAMPLE\Scripts\Draggable2D.cs" />
     <Compile Include="Assets\Свет\VLS2D-master\_SAMPLE\Scripts\Kill_Respawn.cs" />
     <Compile Include="Assets\Свет\VLS2D-master\_SAMPLE\Scripts\LoadLevel.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Assets\Свет\VLS2D-master\DLLSource\Core\Helpers\VLSGlobals.cs" />
     <Compile Include="Assets\Свет\VLS2D-master\DLLSource\Core\Helpers\VLSUtility.cs" />
     <Compile Include="Assets\Свет\VLS2D-master\DLLSource\Core\Objects\VLSDirectional.cs" />
-    <Compile Include="Assets\Свет\VLS2D-master\DLLSource\Core\Objects\VLSObstructor.cs" />
     <Compile Include="Assets\Свет\VLS2D-master\DLLSource\Core\Objects\VLSRadial.cs" />
     <Compile Include="Assets\Свет\VLS2D-master\DLLSource\Core\Objects\VLSRadialCS.cs" />
     <Compile Include="Assets\Свет\VLS2D-master\DLLSource\Core\Objects\VLSViewer.cs" />
