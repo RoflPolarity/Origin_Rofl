@@ -2,17 +2,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class leonid  {
     public static void main(String[] args){
-
+        Main prog = new Main();
+        prog.open();
         JFrame frame = new JFrame ("Legion");
         frame.setSize(new Dimension(600, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridBagLayout());
             String names [] = {"ФИО","Профиль"};
-            String [][] array = {{"Янпольский Артём Олегович", "Физмат"},{"Чеков Леонид Анатольевич","Физмат"}};
+            String [][] array = {{"Янпольский Артём Олегович", "Физмат"},{"Черков Леонид Анатольевич","Физмат"}};
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
