@@ -9,6 +9,7 @@ public class Main {
         Main program = new Main();
         GUI_1 gui = new GUI_1();
         gui.main_GUI();
+        gui.table();
     }
     boolean open(){//Функция коннекта к БД
         try{
@@ -104,5 +105,20 @@ public class Main {
             }
         }catch (Exception e){System.out.println(e.getMessage());}
         return get_name;
+    }
+    ArrayList<String> select_people (){
+        ArrayList<String> array = new ArrayList<>();
+        try {
+            Statement st = co.createStatement();
+            String query = "SELECT id, Имя, Фамилия, Отчество FROM people ORDER BY id";
+            ResultSet rs = st.executeQuery(query);
+            for (int i = 0; rs.next(); i++){
+                array.add(rs.getString("Фамилия") + " " +
+                            rs.getString("Имя") + " " +
+                            rs.getString("Отчество"));
+                System.out.println(array.get(i));
+            }
+        }catch (Exception e ){System.out.println(e.getMessage());}
+        return array;
     }
 }
