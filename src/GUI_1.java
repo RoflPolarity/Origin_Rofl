@@ -12,7 +12,6 @@ public class GUI_1 {
     Toolkit kit = Toolkit.getDefaultToolkit();
     Dimension size = kit.getScreenSize();
     Main prog = new Main();
-    public ArrayList<String> people = prog.select_people();
 
     void main_GUI(){
         JFrame frame = new JFrame();

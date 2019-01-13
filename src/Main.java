@@ -7,8 +7,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner main = new Scanner(System.in);
         Main program = new Main();
-        GUI_1 gui = new GUI_1();
-        gui.main_GUI();
+        program.open();
+        //GUI_1 gui = new GUI_1();
+        //gui.main_GUI();
     }
     boolean open(){//Функция коннекта к БД
         try{
@@ -63,7 +64,7 @@ public class Main {
     void select(){
         try {
             Statement st = co.createStatement();
-            String query = "SELECT id, Имя,Фамилия,Отчество FROM users ORDER BY id ";
+            String query = "SELECT id, Имя,Фамилия,Отчество FROM people ORDER BY id ";
             ResultSet rs = st.executeQuery(query);
             while (rs.next()){
                 int id = rs.getInt("id");
@@ -109,15 +110,15 @@ public class Main {
         ArrayList<String> array = new ArrayList<>();
         try {
             Statement st = co.createStatement();
-            String query = "SELECT id, Имя, Фамилия, Отчество FROM people ORDER BY id";
+            String query = "SELECT id, Имя, Фамилия, Отчество FROM people";
             ResultSet rs = st.executeQuery(query);
-            for (int i = 0; rs.next(); i++){
-                array.add(rs.getString("Фамилия") + " " +
-                            rs.getString("Имя") + " " +
-                            rs.getString("Отчество"));
-                System.out.println(array.get(i));
+            for (int i = 0;  rs.next(); i++){
+                String a = rs.getString("Фамилия");
+                String b = rs.getString("Имя");
+                String c = rs.getString("Отчество");
+                array.add(i,a+" " + " " + b+ " " + c);
             }
         }catch (Exception e ){System.out.println(e.getMessage());}
-        return array;
+    return array;
     }
 }
