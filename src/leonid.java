@@ -22,7 +22,7 @@ public class leonid {
         str[1] = "Зубенко Николай Петрович";
         str[2] = "Основы физико-математики";
 
-        for(int i = 0; i<100; i++)btm.addDate(str);
+        btm.addDate(str);
 
         frame.add(bookTableScrollPane, new GridBagConstraints(0,0,3,1,1,1,
                 GridBagConstraints.NORTH, GridBagConstraints.BOTH,
