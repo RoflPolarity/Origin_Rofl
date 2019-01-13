@@ -8,6 +8,12 @@
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
+      <introspection-schemas>*:</introspection-schemas>
+    </data-source>
+    <data-source name="users" uuid="9cfd05ba-60e8-4c5a-8961-a324d069a70f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:</introspection-schemas>
     </data-source>
   </component>
 </project>
