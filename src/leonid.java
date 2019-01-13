@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class leonid {
+public class leonid  {
     public static void main(String[] args){
         JFrame frame = new JFrame ("Legion");
         frame.setSize(new Dimension(600, 400));
