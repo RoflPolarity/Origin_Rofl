@@ -19,14 +19,8 @@ public class leonid  {
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(400,400));
         frame.add(bookTableScrollPane);
-
-        frame.add(deleteButton, new GridBagConstraints(1,1,1,1,1,1,
-                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(1,1,1,1),0,0));
-
-        frame.add(clearButton, new GridBagConstraints(2,1,1,1,1,1,
-                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
-                new Insets(1,1,1,1),0,0));
+        frame.add(deleteButton);
+        frame.add(clearButton);
 
         frame.setVisible(true);
         frame.pack();
