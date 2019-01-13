@@ -22,7 +22,7 @@ public class leonid  {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(array[0][1]);
+                System.out.println(array[0][0]+ " " +array[0][1]);
             }
         });
         frame.add(bookTableScrollPane);
