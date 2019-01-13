@@ -60,28 +60,4 @@ public class GUI_1 {
         second_frame.add(panel_2);
         second_frame.setBounds(size.width/2 - 250, size.height/2 - 150,500 , 300);
     }
-    void table(){
-        DefaultTableModel tableModel;
-        JTable table1;
-        Object [] columnsHeader = new String [] {"ФИО обучаегося",
-                "Русский язык", "Литература", "Английский язык",
-                "Алгебра", "Геометрия", "Информатика",
-                "История","Обществознание", "Физика",
-                "Химия", "Биология", "Искусство",
-                "Физическая культура", " ", "Кол-во учащихся: "};
-        String name = " ";
-        for (int i = 0; i==people.size(); i++) {
-            name = people.get(i);
-        }
-        Object[][] array = new String[][]{{name}};
-        tableModel = new DefaultTableModel();
-        tableModel.setColumnIdentifiers(columnsHeader);
-        for (int i = 0; i<array.length; i++) {
-            tableModel.addRow(array[i]);
-        }
-        table1 = new JTable(tableModel);
-        JTable table2 = new JTable();
-        Box contents = new Box(BoxLayout.Y_AXIS);
-        contents.add(new JScrollPane(table1));
-    }
 }

@@ -9,7 +9,6 @@ public class Main {
         Main program = new Main();
         GUI_1 gui = new GUI_1();
         gui.main_GUI();
-        gui.table();
     }
     boolean open(){//Функция коннекта к БД
         try{

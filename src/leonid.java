@@ -9,9 +9,8 @@ public class leonid {
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridBagLayout());
 
-        JButton addButton = new JButton("Добавить");
-        JButton deleteButton = new JButton("Удалить");
-        JButton clearButton = new JButton("Очистить");
+        JButton deleteButton = new JButton("Назад");
+        JButton clearButton = new JButton("Сформировать отчет");
 
         BookTableModel btm = new BookTableModel();
         JTable bookTable = new JTable(btm);
@@ -27,10 +26,6 @@ public class leonid {
 
         frame.add(bookTableScrollPane, new GridBagConstraints(0,0,3,1,1,1,
                 GridBagConstraints.NORTH, GridBagConstraints.BOTH,
-                new Insets(1,1,1,1),0,0));
-
-        frame.add(addButton, new GridBagConstraints(0,1,1,1,1,1,
-                GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
                 new Insets(1,1,1,1),0,0));
 
         frame.add(deleteButton, new GridBagConstraints(1,1,1,1,1,1,
