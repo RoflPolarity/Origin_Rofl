@@ -17,10 +17,9 @@ public class leonid  {
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(400,400));
             Main prog = new Main();
+            prog.open();
             prog.select_people();
-            for (int i = 0; i==prog.select_people().size(); i++) {
-                System.out.println(prog.select_people().get(i));
-            }
+                System.out.println(prog.select_people());
        // btm.addDate();
 
         frame.add(bookTableScrollPane, new GridBagConstraints(0,0,3,1,1,1,
