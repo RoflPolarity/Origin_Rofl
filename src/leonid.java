@@ -1,12 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class leonid {
-    Main prog = new Main();
+public class leonid  {
     public static void main(String[] args){
-        Main prog = new Main();
-        prog.open();
-        String [] jre;
         JFrame frame = new JFrame ("Legion");
         frame.setSize(new Dimension(600, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -20,8 +16,12 @@ public class leonid {
         JTable bookTable = new JTable(btm);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(400,400));
-            System.out.println(prog.select_people());
-        // btm.addDate();
+            Main prog = new Main();
+            prog.select_people();
+            for (int i = 0; i==prog.select_people().size(); i++) {
+                System.out.println(prog.select_people().get(i));
+            }
+       // btm.addDate();
 
         frame.add(bookTableScrollPane, new GridBagConstraints(0,0,3,1,1,1,
                 GridBagConstraints.NORTH, GridBagConstraints.BOTH,
