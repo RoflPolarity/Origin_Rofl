@@ -41,9 +41,8 @@ public class BookTableModel extends AbstractTableModel {
         return rows[columnIndex];
     }
 
-    public void addDate(String[] row) {
+    public void addDate(ArrayList<String> row) {
         String[] rowTable = new String[getColumnCount()];
-        rowTable = row;
         dataArrayList.add(rowTable);
     }
 }

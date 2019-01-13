@@ -16,13 +16,12 @@ public class leonid {
         JTable bookTable = new JTable(btm);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(400,400));
-
-        String []str = new String[3];
-        str[0] = "1";
-        str[1] = "Зубенко Николай Петрович";
-        str[2] = "Основы физико-математики";
-
-        btm.addDate(str);
+            Main prog = new Main();
+            prog.select_people();
+            for (int i = 0; i==prog.select_people().size(); i++) {
+                System.out.println(prog.select_people().get(i));
+            }
+       // btm.addDate();
 
         frame.add(bookTableScrollPane, new GridBagConstraints(0,0,3,1,1,1,
                 GridBagConstraints.NORTH, GridBagConstraints.BOTH,
@@ -38,5 +37,6 @@ public class leonid {
 
         frame.setVisible(true);
         frame.pack();
+        frame.revalidate();
     }
 }
