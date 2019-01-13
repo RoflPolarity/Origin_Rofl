@@ -19,7 +19,7 @@ public class leonid  {
             Main prog = new Main();
             prog.open();
             prog.select_people();
-                System.out.println(prog.select_people());
+                //System.out.println(prog.select_people());
        // btm.addDate();
 
         frame.add(bookTableScrollPane, new GridBagConstraints(0,0,3,1,1,1,
