@@ -41,6 +41,7 @@ public class Main1 {
         public void setProfile(String profile) {
             this.profile = profile;
         }
+
     }
 
     public static void main(String[] args) {
