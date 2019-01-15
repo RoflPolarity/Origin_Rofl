@@ -31,7 +31,7 @@ public class Main1 {
         public String getOcenka(){
             return ocenka;
         }
-        public void setOcenka(){
+        public void setOcenka(String ocenka){
             this.ocenka = ocenka;
         }
 
@@ -84,7 +84,7 @@ public class Main1 {
             String b = rs.getString("Имя");
             String c = rs.getString("Отчество");
             String d = rs.getString("Факультет");
-            User sample = new User(a + " " + b + " " + c,d," ");
+            User sample = new User(a + " " + b + " " + c,d,"");
             //получаешь строку с именем из resultset'a
             //получешь строку с профилем из resultset'a
             //пихаешь из в объект User
@@ -98,10 +98,13 @@ public class Main1 {
     }
 
     public String[][] transformArrayList(List<User> users) {
-        String[][] transformedUsers = new String[users.size()][2];
+        String[][] transformedUsers = new String[users.size()][5];
         for(int i = 0; i < users.size(); i++) {
             transformedUsers[i][0] = users.get(i).getName();
             transformedUsers[i][1] = users.get(i).getProfile();
+            transformedUsers[i][2] = users.get(i).getOcenka();
+            transformedUsers[i][3] = users.get(i).getOcenka();
+            transformedUsers[i][4] = users.get(i).getOcenka();
         }
         return transformedUsers;
 

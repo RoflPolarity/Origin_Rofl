@@ -14,11 +14,15 @@ public class BookTableModel extends AbstractTableModel {
     public int getColumnCount() {
         return 5;
     }
-
+    @Override
+    public String getColumnName(int column){
+        column = 1;
+        String names = "ФИО";
+        return names;
+    }
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-
-        String [] [] people  = setName.transformArrayList(setName.getNames());
-        return people;
+        String [][] array = setName.transformArrayList(setName.getNames());
+        return array;
     }
 }

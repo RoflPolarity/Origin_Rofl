@@ -14,18 +14,18 @@ public class leonid  {
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridBagLayout());
         Main1 arr = new Main1();
-            String names [] = {"ФИО","Профиль"};
+            String names [] = {"ФИО","Профиль","Русский язык","Алгебра","Геометрия"};
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
-//        String [] [] tebledata = arr.transformArrayList(arr.getNames());
-        JTable bookTable = new JTable(btm);
+        String [] [] tebledata = arr.transformArrayList(arr.getNames());
+        JTable bookTable = new JTable(tebledata,names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(400,400));
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println();
+
             }
         });
         frame.add(bookTableScrollPane);
