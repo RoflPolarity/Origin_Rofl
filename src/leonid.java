@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 //.
 public class leonid  {
     public static void main(String[] args){
@@ -16,12 +18,14 @@ public class leonid  {
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
-        JTable bookTable = new JTable(arr.transformArrayList(arr.getNames()),names);
+        String [] [] tebledata = arr.transformArrayList(arr.getNames());
+        JTable bookTable = new JTable(tebledata,names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(400,400));
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                System.out.println();
             }
         });
         frame.add(bookTableScrollPane);

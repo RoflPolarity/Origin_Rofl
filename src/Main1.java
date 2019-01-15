@@ -68,7 +68,7 @@ public class Main1 {
         List<User> users = new ArrayList();
         try {
             Statement st = co.createStatement();
-            ResultSet rs = st.executeQuery("SELECT id, Имя, Фамилия, Отчество, Факультет FROM people");
+            ResultSet rs = st.executeQuery("SELECT id, Имя, Фамилия, Отчество, Факультет FROM people ORDER BY Фамилия");
         while (rs.next()){
             String a = rs.getString("Фамилия");
             String b = rs.getString("Имя");
