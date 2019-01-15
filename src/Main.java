@@ -15,7 +15,7 @@ public class Main {
     boolean open(){//Функция коннекта к БД
         try{
             Class.forName("org.sqlite.JDBC");
-             co = DriverManager.getConnection("jdbc:sqlite:database\\users.db");//Ноут то не мой)) Эт путь к бд
+             co = DriverManager.getConnection("jdbc:sqlite:database\\users.db");
             System.out.println("Connected");
             return true;
         }
