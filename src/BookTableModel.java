@@ -12,7 +12,7 @@ public class BookTableModel extends AbstractTableModel {
             dataArrayList.add(new String[getColumnCount()]);
         }
     }
-
+//
     @Override
     public int getRowCount() {
         synchronized (data) {

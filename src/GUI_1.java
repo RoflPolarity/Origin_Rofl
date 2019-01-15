@@ -12,7 +12,7 @@ public class GUI_1 {
     Toolkit kit = Toolkit.getDefaultToolkit();
     Dimension size = kit.getScreenSize();
     Main prog = new Main();
-
+//
     void main_GUI(){
         JFrame frame = new JFrame();
         frame.setVisible(true);

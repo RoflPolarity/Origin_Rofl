@@ -10,6 +10,7 @@ public class Main {
         program.open();
         //GUI_1 gui = new GUI_1();
         //gui.main_GUI();
+        //
     }
     boolean open(){//Функция коннекта к БД
         try{
