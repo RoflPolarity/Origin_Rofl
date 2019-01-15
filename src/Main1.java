@@ -20,10 +20,19 @@ public class Main1 {
     class User {
         private String name;
         private String profile;
+        private String ocenka;
 
-        public User(String name, String profile) {
+        public User(String name, String profile, String ocenka) {
             this.name = name;
             this.profile = profile;
+            this.ocenka = ocenka;
+        }
+
+        public String getOcenka(){
+            return ocenka;
+        }
+        public void setOcenka(){
+            this.ocenka = ocenka;
         }
 
         public String getName() {
@@ -65,7 +74,7 @@ public class Main1 {
         this.open();
 
         //Это результат селекта "SELECT id, Имя, Фамилия, Отчество, Profile FROM people"
-        String [][] array = {{"Япольский Артём Олегович", "Физмат"}};
+        String [][] array = {{}};
         List<User> users = new ArrayList();
         try {
             Statement st = co.createStatement();
@@ -75,7 +84,7 @@ public class Main1 {
             String b = rs.getString("Имя");
             String c = rs.getString("Отчество");
             String d = rs.getString("Факультет");
-            User sample = new User(a + " " + b + " " + c,d);
+            User sample = new User(a + " " + b + " " + c,d," ");
             //получаешь строку с именем из resultset'a
             //получешь строку с профилем из resultset'a
             //пихаешь из в объект User

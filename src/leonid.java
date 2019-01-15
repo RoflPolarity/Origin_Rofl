@@ -18,8 +18,8 @@ public class leonid  {
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
-        String [] [] tebledata = arr.transformArrayList(arr.getNames());
-        JTable bookTable = new JTable(tebledata,names);
+//        String [] [] tebledata = arr.transformArrayList(arr.getNames());
+        JTable bookTable = new JTable(btm);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(400,400));
         clearButton.addActionListener(new ActionListener() {
