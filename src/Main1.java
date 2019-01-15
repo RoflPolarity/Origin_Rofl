@@ -1,23 +1,22 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.rmi.MarshalledObject;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main1 {
     Connection co;
-    boolean open() {//Функция коннекта к БД
-        try {
+    boolean open(){//Функция коннекта к БД
+        try{
             Class.forName("org.sqlite.JDBC");
             co = DriverManager.getConnection("jdbc:sqlite:database\\users.db");
             System.out.println("Connected");
             return true;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        }
+        catch (Exception e){
+            System.out.println (e.getMessage());
         }
         return false;
-    }
-
+    }//Связь с БД (открытие)
     class User {
         private String name;
         private String profile;
@@ -61,19 +60,30 @@ public class Main1 {
     }
 
     public List<User> getNames() {
+        Main prog = new Main();
+        this.open();
 
         //Это результат селекта "SELECT id, Имя, Фамилия, Отчество, Profile FROM people"
-        String [][] array = {{}};
+        String [][] array = {{"Япольский Артём Олегович", "Физмат"}};
         List<User> users = new ArrayList();
-
-        for (int i = 0; i < array.length; i++) {
+        try {
+            Statement st = co.createStatement();
+            ResultSet rs = st.executeQuery("SELECT id, Имя, Фамилия, Отчество, Факультет FROM people");
+        while (rs.next()){
+            String a = rs.getString("Фамилия");
+            String b = rs.getString("Имя");
+            String c = rs.getString("Отчество");
+            String d = rs.getString("Факультет");
+            User sample = new User(a + " " + b + " " + c,d);
             //получаешь строку с именем из resultset'a
             //получешь строку с профилем из resultset'a
             //пихаешь из в объект User
             //и добавляешь его в список
-            users.add(new User(array[i][0], array[i][1]));
+            users.add(sample);
         }
-
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
         return users;
     }
 

@@ -6,25 +6,22 @@ import java.util.ArrayList;
 //.
 public class leonid  {
     public static void main(String[] args){
-        Main prog = new Main();
-        prog.open();
         JFrame frame = new JFrame ("Legion");
         frame.setSize(new Dimension(600, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridBagLayout());
+        Main1 arr = new Main1();
             String names [] = {"ФИО","Профиль"};
-            String [][] array = {{"Янпольский Артём Олегович", "Физмат"},{"Черков Леонид Анатольевич","Физмат"}};
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
-        JTable bookTable = new JTable(array,names);
+        JTable bookTable = new JTable(arr.transformArrayList(arr.getNames()),names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(400,400));
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(array[0][0]+ " " +array[0][1]);
             }
         });
         frame.add(bookTableScrollPane);
