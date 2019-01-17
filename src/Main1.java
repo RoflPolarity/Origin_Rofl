@@ -98,13 +98,23 @@ public class Main1 {
     }
 
     public String[][] transformArrayList(List<User> users) {
-        String[][] transformedUsers = new String[users.size()][5];
+        String[][] transformedUsers = new String[users.size()][16];
         for(int i = 0; i < users.size(); i++) {
             transformedUsers[i][0] = users.get(i).getName();
             transformedUsers[i][1] = users.get(i).getProfile();
             transformedUsers[i][2] = users.get(i).getOcenka();
             transformedUsers[i][3] = users.get(i).getOcenka();
-            transformedUsers[i][4] = users.get(i).getOcenka();
+            transformedUsers[i][5] = users.get(i).getOcenka();
+            transformedUsers[i][6] = users.get(i).getOcenka();
+            transformedUsers[i][7] = users.get(i).getOcenka();
+            transformedUsers[i][8] = users.get(i).getOcenka();
+            transformedUsers[i][9] = users.get(i).getOcenka();
+            transformedUsers[i][10] = users.get(i).getOcenka();
+            transformedUsers[i][11] = users.get(i).getOcenka();
+            transformedUsers[i][12] = users.get(i).getOcenka();
+            transformedUsers[i][13] = users.get(i).getOcenka();
+            transformedUsers[i][14] = users.get(i).getOcenka();
+            transformedUsers[i][15] = users.get(i).getOcenka();
         }
         return transformedUsers;
 

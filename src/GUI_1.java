@@ -16,6 +16,7 @@ public class GUI_1 {
     void main_GUI(){
         JFrame frame = new JFrame();
         frame.setVisible(true);
+        frame.setResizable(false);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         frame.add(panel);

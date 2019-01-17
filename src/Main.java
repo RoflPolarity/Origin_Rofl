@@ -8,8 +8,8 @@ public class Main {
         Scanner main = new Scanner(System.in);
         Main program = new Main();
         program.open();
-        //GUI_1 gui = new GUI_1();
-        //gui.main_GUI();
+        GUI_1 gui = new GUI_1();
+        gui.main_GUI();
         //.
     }
     boolean open(){//Функция коннекта к БД
@@ -22,7 +22,7 @@ public class Main {
             System.out.println (e.getMessage());
         }
         return false;
-    }//Связь с БД (открытие)
+    }
     void update(){
         try{
         System.out.println("Введите, что надо изменить");
@@ -35,7 +35,7 @@ public class Main {
         Statement stmt = co.createStatement();
         int re = stmt.executeUpdate(query);
     }catch (Exception e){System.out.println(e.getMessage());}
-    }//Обновление БД
+    }
     void insert() {
         try {
             //Ввод переменных
@@ -52,7 +52,7 @@ public class Main {
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
-    }//Вставка записи в БД
+    }
     void close(){ //Закрытие
         try {
             co.close();
@@ -60,7 +60,7 @@ public class Main {
         catch (Exception e){
             System.out.println(e.getMessage());
         }
-        }//Связь с БД (закрытие)
+        }
     void select(){
         try {
             Statement st = co.createStatement();
@@ -77,7 +77,7 @@ public class Main {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-    }//Вывод всей табл
+    }
     void delete(){
         try {
             System.out.println("Какую строку удалить?");
@@ -92,7 +92,7 @@ public class Main {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-    }//Удаление записи с БД
+    }
     String valid_name(String name){
         String get_name = "";
         try {
