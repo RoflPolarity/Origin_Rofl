@@ -12,7 +12,7 @@ public class leonid  {
     public static void main(String[] args){
         JFrame frame = new JFrame ("Legion");
         frame.setResizable(false);
-        frame.setSize(new Dimension(400, 400));
+        frame.setSize(new Dimension(800, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridBagLayout());
@@ -24,7 +24,7 @@ public class leonid  {
         String [] [] tebledata = arr.transformArrayList(arr.getNames());
         JTable bookTable = new JTable(tebledata,names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
-        bookTableScrollPane.setPreferredSize(new Dimension(1500,250));
+        bookTableScrollPane.setPreferredSize(new Dimension(1100,250));
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
