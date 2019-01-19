@@ -34,10 +34,9 @@ import java.util.ArrayList;
                 if (username.getText().equals("")){
                     System.out.println("Введите текст");
                 } else {
-                    //frame.setVisible(false);
-                    String name1 = username.getText();
-                    String out =  make.vale(name1);
-                    System.out.println(out);
+                    String names = username.getText();
+                    frame.setVisible(false);
+                    make.vale(names);
                 }
             }
         });

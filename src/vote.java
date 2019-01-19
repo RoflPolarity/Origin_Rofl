@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -15,10 +16,15 @@ public class vote {
         ResultSet rs = st.executeQuery(query);
         String classes = rs.getString("Классы");
         String [] words = classes.split(",");
-
+    //https://stackoverrun.com/ru/q/12840175
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+
         }
+        JFrame frame = new JFrame();
+        frame.setSize(500,800);
+        JMenu menu = new JMenu("Меню");
+        frame.add(menu);
+        frame.setVisible(true);
     }
 }
