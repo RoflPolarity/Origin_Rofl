@@ -8,12 +8,12 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
-public class GUI_1 {
+  class GUI_1 {
     Toolkit kit = Toolkit.getDefaultToolkit();
     Dimension size = kit.getScreenSize();
     Main prog = new Main();
-//.
     void main_GUI(){
+        vote make = new vote();
         JFrame frame = new JFrame();
         frame.setVisible(true);
         frame.setResizable(false);
@@ -34,8 +34,8 @@ public class GUI_1 {
                 if (username.getText().equals("")){
                     System.out.println("Введите текст");
                 } else {
-                    frame.setVisible(false);
-                    second_window();
+                    //frame.setVisible(false);
+                    make.vale(username.getText());
                 }
             }
         });
