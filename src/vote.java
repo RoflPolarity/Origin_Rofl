@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -16,15 +18,18 @@ public class vote {
         ResultSet rs = st.executeQuery(query);
         String classes = rs.getString("Классы");
         String [] words = classes.split(",");
-    //https://stackoverrun.com/ru/q/12840175
         }
         catch (Exception e){
 
         }
-        JFrame frame = new JFrame();
-        frame.setSize(500,800);
-        JMenu menu = new JMenu("Меню");
-        frame.add(menu);
+        JFrame frame = new JFrame("Выбор класса");
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension dimension = toolkit.getScreenSize();
+        frame.setBounds(dimension.width/2 - 250, dimension.height/2 - 150, 500,300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        String[] items = {"Leonid","Valechka","Artyom"};
+        JComboBox comboBox = new JComboBox(items);
+        frame.add(comboBox);
         frame.setVisible(true);
     }
 }

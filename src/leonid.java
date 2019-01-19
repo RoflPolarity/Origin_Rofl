@@ -11,8 +11,10 @@ public class leonid  {
     static Dimension size = kit.getScreenSize();
     public static void main(String[] args){
         JFrame frame = new JFrame ("Legion");
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension dimension = toolkit.getScreenSize();
+        frame.setBounds(dimension.width/2, dimension.height/2 - 150, 1300,300);
         frame.setResizable(false);
-        frame.setSize(new Dimension(800, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridBagLayout());
