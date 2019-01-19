@@ -36,7 +36,7 @@ import java.util.ArrayList;
                 } else {
                     String names = username.getText();
                     frame.setVisible(false);
-                    make.vale(names);
+                   // make.vale(names);
                 }
             }
         });

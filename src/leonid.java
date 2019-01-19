@@ -2,14 +2,20 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Arrays;
 
-//.
 public class leonid  {
+    static String [] [] tebledata;
     static Toolkit kit = Toolkit.getDefaultToolkit();
     static Dimension size = kit.getScreenSize();
+    static leonid len = new leonid();
     public static void main(String[] args){
+        Timer timer1 = new Timer(5000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                len.join(tebledata);
+            }
+        });
+        leonid len = new leonid();
         JFrame frame = new JFrame ("Legion");
         frame.setResizable(false);
         frame.setSize(new Dimension(800, 400));
@@ -21,7 +27,7 @@ public class leonid  {
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
-        String [] [] tebledata = arr.transformArrayList(arr.getNames());
+        tebledata = arr.transformArrayList(arr.getNames());
         JTable bookTable = new JTable(tebledata,names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(1100,250));
@@ -31,11 +37,15 @@ public class leonid  {
 
             }
         });
+        timer1.start();
         frame.add(bookTableScrollPane);
         frame.add(deleteButton);
         frame.add(clearButton);
         frame.setVisible(true);
         frame.pack();
         frame.revalidate();
+    }
+    String[][] join (String[][] array){
+        return array;
     }
 }
