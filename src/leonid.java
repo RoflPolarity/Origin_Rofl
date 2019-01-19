@@ -7,6 +7,15 @@ import java.util.Arrays;
 
 //.
 public class leonid  {
+    leonid len = new leonid();
+
+    Timer timer1 = new Timer(5000, new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+                 len.join(tebledata);
+        }
+    });
+    static String [] [] tebledata;
     static Toolkit kit = Toolkit.getDefaultToolkit();
     static Dimension size = kit.getScreenSize();
     public static void main(String[] args){
@@ -23,7 +32,7 @@ public class leonid  {
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
-        String [] [] tebledata = arr.transformArrayList(arr.getNames());
+        tebledata = arr.transformArrayList(arr.getNames());
         JTable bookTable = new JTable(tebledata,names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(1100,250));
@@ -39,5 +48,8 @@ public class leonid  {
         frame.setVisible(true);
         frame.pack();
         frame.revalidate();
+    }
+    String [] [] join (String[][] array){
+      return array;
     }
 }
