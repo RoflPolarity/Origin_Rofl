@@ -2,25 +2,31 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.EventListener;
 
 //.
 public class leonid  {
-    leonid len = new leonid();
 
-    Timer timer1 = new Timer(5000, new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e)
-        {
-
-                 len.join(tebledata);
-        }
-    });
-    static String [] [] tebledata;
+    private static String [] [] tebledata;
     static Toolkit kit = Toolkit.getDefaultToolkit();
     static Dimension size = kit.getScreenSize();
     public static void main(String[] args){
+         leonid len = new leonid();
+         save save1 = new save();
+        Timer timer1 = new Timer(2000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                len.join(tebledata);
+               // save1.save_table(tebledata);
+
+            }
+        });
         JFrame frame = new JFrame ("Legion");
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
@@ -44,6 +50,44 @@ public class leonid  {
 
             }
         });
+        frame.addWindowListener(new WindowListener() {
+            @Override
+            public void windowOpened(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+
+                save1.save_table(len.join(tebledata));
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+
+            }
+        });
+        timer1.start();
         frame.add(bookTableScrollPane);
         frame.add(deleteButton);
         frame.add(clearButton);
