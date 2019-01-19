@@ -11,7 +11,9 @@ public class leonid  {
 
     Timer timer1 = new Timer(5000, new ActionListener() {
         @Override
-        public void actionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e)
+        {
+
                  len.join(tebledata);
         }
     });
