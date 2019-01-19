@@ -5,12 +5,11 @@ public class Main {
     Scanner data = new Scanner(System.in);
     Connection co;
     public static void main(String[] args) {
-        Scanner main = new Scanner(System.in);
+        Scanner main =  new Scanner(System.in);
         Main program = new Main();
         program.open();
         GUI_1 gui = new GUI_1();
         gui.main_GUI();
-        //.
     }
     boolean open(){//Функция коннекта к БД
         try{

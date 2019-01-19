@@ -35,7 +35,9 @@ import java.util.ArrayList;
                     System.out.println("Введите текст");
                 } else {
                     //frame.setVisible(false);
-                    make.vale(username.getText());
+                    String name1 = username.getText();
+                    String out =  make.vale(name1);
+                    System.out.println(out);
                 }
             }
         });
