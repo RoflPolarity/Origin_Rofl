@@ -1,5 +1,9 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class save {
+    List<Main1.User> load = new ArrayList();
     File tableSaved = new File("Table.txt");
         void save_table (String [] [] array) {
             try {
@@ -18,5 +22,19 @@ public class save {
             }catch (Exception e){
                 //Exception
             }
+        }
+        String [] [] read_teable () throws IOException {
+            Main1 matrix = new Main1();
+            BufferedReader br = new BufferedReader(new FileReader("Table.txt"));
+            int i = 0;
+            ArrayList<String> row = new ArrayList<String>();
+            while (br.readLine()!=null){
+                br.readLine();
+                //Main1.User sample = new Main1.User()
+                //load.add(i,);
+                i = i+1;
+            }
+            String [] [] newTable = matrix.transformArrayList(load);
+            return newTable;
         }
 }

@@ -88,6 +88,16 @@ public class leonid  {
 
             }
         });
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    System.out.println(save1.read_teable()[0][0]);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
         timer1.start();
         frame.add(bookTableScrollPane);
         frame.add(deleteButton);
