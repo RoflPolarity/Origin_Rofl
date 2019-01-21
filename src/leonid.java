@@ -25,6 +25,11 @@ public class leonid  {
             public void actionPerformed(ActionEvent e)
             {
                 len.join(tebledata);
+                try {
+                    save1.update_table(tebledata);
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
         JFrame frame = new JFrame ("Legion");

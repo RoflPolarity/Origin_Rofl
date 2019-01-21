@@ -33,6 +33,7 @@ public class Main {
             return rs;
     }
     int connection_Update (String query) throws SQLException {
+        this.open();
         Statement st = co.createStatement();
         int rs = st.executeUpdate(query);
         return rs;
