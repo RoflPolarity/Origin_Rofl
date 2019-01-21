@@ -1,40 +1,33 @@
 import java.io.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class save {
-    List<Main1.User> load = new ArrayList();
-    File tableSaved = new File("Table.txt");
-        void save_table (String [] [] array) {
-            try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(tableSaved,true));
-                PrintWriter writer1 = new PrintWriter("Table.txt");
-                String lineSeparator = System.getProperty("line.separator");
-            int a = 0;
-                writer1.print("");
-                writer1.close();
-            for (int i =0; i<=array.length;i++){
-                writer.write(array[i][a] +" - "+ array[i][a+1] +" - " + array[i][a+2] +" - "+ array[i][a+3] +" - "+ array[i][a+4] +" - " + array[i][a+5]+ " - " + array[i][a+6] + " - " + array[i][a+7] + " - " + array[i][a+8] + " - " + array[i][a+9] + " - " + array[i][a+10] + " - " + array[i][a+11] + " - " + array[i][a+12] + " - " + array[i][a+13] + " - " + array[i][a+14]+ " - " + array[i][a+15]+lineSeparator);
-                writer.flush();
-
-            }
-                writer.close();
-            }catch (Exception e){
-                //Exception
-            }
+    Main prog = new Main();
+        void save_table (String [] [] array) throws SQLException {
+            String query = "create table if not exists '11А'(id INTEGER PRIMARY KEY AUTOINCREMENT, ФИО TEXT NOT NULL, Русский язык INTEGER NOT NULL,Алгебра INTEGER NOT NULL,Геометрия INTEGER NOT NULL,Химия INTEGER NOT NULL,Физика INTEGER NOT NULL, Литература INTEGER NOT NULL,География INTEGER NOT NULL, Искусство INTEGER NOT NULL,Физра INTEGER NOT NULL,Информатика INTEGER NOT NULL,English INTEGER NOT NULL,Обществознание INTEGER NOT NULL,стория INTEGER NOT NULL)";
+            Boolean check = prog.connection_execute(query);
+            System.out.println(check);
+//            prog.connection_Query("CREATE TABLE 11А(" +
+//                    "id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+//                    "ФИО TEXT NOT NULL,\n" +
+//                    "Русский язык INTEGER NOT NULL,\n" +
+//                    "Алгебра INTEGER NOT NULL,\n" +
+//                    "Геометрия INTEGER NOT NULL),\n" +
+//                    "Химия INTEGER NOT NULL\n" +
+//                    "Физика INTEGER NOT NULL\n" +
+//                    "Литература INTEGER NOT NULL\n" +
+//                    "География INTEGER NOT NULL\n" +
+//                    "Искусство INTEGER NOT NULL\n" +
+//                    "Физ.Культура INTEGER NOT NULL\n" +
+//                    "Информатика INTEGER NOT NULL\n" +
+//                    "Англ.Язык INTEGER NOT NULL\n" +
+//                    "Обществознание INTEGER NOT NULL\n" +
+//                    "История INTEGER NOT NULL\n");
         }
-        String [] [] read_teable () throws IOException {
-            Main1 matrix = new Main1();
-            BufferedReader br = new BufferedReader(new FileReader("Table.txt"));
-            int i = 0;
-            ArrayList<String> row = new ArrayList<String>();
-            while (br.readLine()!=null){
-                br.readLine();
-                //Main1.User sample = new Main1.User()
-                //load.add(i,);
-                i = i+1;
-            }
-            String [] [] newTable = matrix.transformArrayList(load);
-            return newTable;
+        void read_teable (String[][] array) throws IOException {
+
         }
 }

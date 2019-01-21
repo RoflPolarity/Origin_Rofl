@@ -6,6 +6,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EventListener;
@@ -19,13 +20,11 @@ public class leonid  {
     public static void main(String[] args){
          leonid len = new leonid();
          save save1 = new save();
-        Timer timer1 = new Timer(2000, new ActionListener() {
+        Timer timer1 = new Timer(500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
             {
                 len.join(tebledata);
-                save1.save_table(tebledata);
-
             }
         });
         JFrame frame = new JFrame ("Legion");
@@ -37,7 +36,7 @@ public class leonid  {
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridBagLayout());
         Main1 arr = new Main1();
-            String names [] = {"ФИО","Профиль","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Изык","Обществознание","История"};
+            String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
@@ -48,7 +47,11 @@ public class leonid  {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    save1.save_table(tebledata);
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
         frame.addWindowListener(new WindowListener() {
@@ -60,7 +63,11 @@ public class leonid  {
             @Override
             public void windowClosing(WindowEvent e) {
 
-                save1.save_table((len.join(tebledata)));
+                try {
+                    save1.save_table(len.join(tebledata));
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
             }
 
             @Override
@@ -92,7 +99,7 @@ public class leonid  {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    System.out.println(save1.read_teable()[0][0]);
+                    save1.read_teable(tebledata);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }

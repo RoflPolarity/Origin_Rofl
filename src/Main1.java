@@ -22,86 +22,17 @@ public class Main1 {
         private String profile;
         private String ocenka;
 
-        public User(String name, String profile, String ocenka) {
+        public User(String name, String ocenka) {
             this.name = name;
             this.profile = profile;
             this.ocenka = ocenka;
         }
 
-        public String getOcenka1(){
+        public String getOcenka(){
             return ocenka;
         }
-        public void setOcenka1(String ocenka){
+        public void setOcenka(String ocenka){
             this.ocenka = ocenka;
-        }
-        public String getOcenka2(){
-            return ocenka;
-        }
-        public void setOcenka2(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka3(){
-            return ocenka;
-        }
-        public void setOcenka3(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka4(){
-            return ocenka;
-        }
-        public void setOcenka4(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka5(){
-            return ocenka;
-        }
-        public void setOcenka5(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka6(){
-            return ocenka;
-        }
-        public void setOcenka6(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka7(){
-            return ocenka;
-        }
-        public void setOcenka7(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka8(){
-            return ocenka;
-        }
-        public void setOcenka8(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka9(){
-            return ocenka;
-        }
-        public void setOcenka9(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka10(){
-            return ocenka;
-        }
-        public void setOcenka10(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka11(){
-            return ocenka;
-        }
-        public void setOcenka11(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka12(){
-            return ocenka;
-        }
-        public void setOcenka12(String ocenka){
-            this.ocenka = ocenka;
-        }
-        public String getOcenka13(){
-            return ocenka;
         }
 
         public String getName() {
@@ -152,8 +83,7 @@ public class Main1 {
             String a = rs.getString("Фамилия");
             String b = rs.getString("Имя");
             String c = rs.getString("Отчество");
-            String d = rs.getString("Факультет");
-            User sample = new User(a + " " + b + " " + c,d,"");
+            User sample = new User(a + " " + b + " " + c,"");
             //получаешь строку с именем из resultset'a
             //получешь строку с профилем из resultset'a
             //пихаешь из в объект User
@@ -167,23 +97,22 @@ public class Main1 {
     }
 
     public String[][] transformArrayList(List<User> users) {
-        String[][] transformedUsers = new String[users.size()][16];
+        String[][] transformedUsers = new String[users.size()][14];
         for(int i = 0; i < users.size(); i++) {
             transformedUsers[i][0] = users.get(i).getName();
-            transformedUsers[i][1] = users.get(i).getProfile();
-            transformedUsers[i][2] = users.get(i).getOcenka1();
-            transformedUsers[i][3] = users.get(i).getOcenka2();
-            transformedUsers[i][5] = users.get(i).getOcenka3();
-            transformedUsers[i][6] = users.get(i).getOcenka4();
-            transformedUsers[i][7] = users.get(i).getOcenka5();
-            transformedUsers[i][8] = users.get(i).getOcenka6();
-            transformedUsers[i][9] = users.get(i).getOcenka7();
-            transformedUsers[i][10] = users.get(i).getOcenka8();
-            transformedUsers[i][11] = users.get(i).getOcenka9();
-            transformedUsers[i][12] = users.get(i).getOcenka10();
-            transformedUsers[i][13] = users.get(i).getOcenka11();
-            transformedUsers[i][14] = users.get(i).getOcenka12();
-            transformedUsers[i][15] = users.get(i).getOcenka13();
+            transformedUsers[i][1] = users.get(i).getOcenka();
+            transformedUsers[i][2] = users.get(i).getOcenka();
+            transformedUsers[i][3] = users.get(i).getOcenka();
+            transformedUsers[i][4] = users.get(i).getOcenka();
+            transformedUsers[i][5] = users.get(i).getOcenka();
+            transformedUsers[i][6] = users.get(i).getOcenka();
+            transformedUsers[i][7] = users.get(i).getOcenka();
+            transformedUsers[i][8] = users.get(i).getOcenka();
+            transformedUsers[i][9] = users.get(i).getOcenka();
+            transformedUsers[i][10] = users.get(i).getOcenka();
+            transformedUsers[i][11] = users.get(i).getOcenka();
+            transformedUsers[i][12] = users.get(i).getOcenka();
+            transformedUsers[i][13] = users.get(i).getOcenka();
         }
         return transformedUsers;
 

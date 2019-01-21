@@ -22,35 +22,20 @@ public class Main {
         }
         return false;
     }
-    void update(){
-        try{
-        System.out.println("Введите, что надо изменить");
-        String smena = data.nextLine();
-        System.out.println("На что нужно изменить этот параметр?");
-        String otvet_smena = data.nextLine();
-        System.out.println("Введите id человека");
-        String gde = data.nextLine();
-        String query = "UPDATE users " + "SET " + smena + " = " + "'" + otvet_smena  + "'" + " WHERE id = " + gde;
-        Statement stmt = co.createStatement();
-        int re = stmt.executeUpdate(query);
-    }catch (Exception e){System.out.println(e.getMessage());}
+    Boolean connection_execute (String query) throws SQLException{
+        this.open();
+        Statement st = co.createStatement();
+        return st.execute(query);
     }
-    void insert() {
-        try {
-            //Ввод переменных
-                System.out.println("Введите ФИО ученика: ");
-                String FIO = data.nextLine();
-                String [] words = FIO.split(" ");
-                System.out.println("Введите класс ученика ");
-                String classes = data.nextLine();
-                System.out.println("Введите факультет ученика ");
-                String facult = data.nextLine();
-        String query = "INSERT INTO users (Имя, Фамилия, Отчество, Класс, Факультет)"+ " VALUES ('"+ words[1] + "','" + words[0] + "','"  + words[2] + "','" + classes +"','" + facult +"')";
-        Statement stmt = co.createStatement();
-        int rs = stmt.executeUpdate(query);
-        } catch (Exception e){
-            System.out.println(e.getMessage());
-        }
+    ResultSet connection_Query (String query) throws SQLException {
+            Statement st = co.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            return rs;
+    }
+    int connection_Update (String query) throws SQLException {
+        Statement st = co.createStatement();
+        int rs = st.executeUpdate(query);
+        return rs;
     }
     void close(){ //Закрытие
         try {
@@ -60,38 +45,6 @@ public class Main {
             System.out.println(e.getMessage());
         }
         }
-    void select(){
-        try {
-            Statement st = co.createStatement();
-            String query = "SELECT id, Имя,Фамилия,Отчество FROM people ORDER BY id ";
-            ResultSet rs = st.executeQuery(query);
-            while (rs.next()){
-                int id = rs.getInt("id");
-                String name = rs.getString("Имя");
-                String fam = rs.getString("Фамилия");
-                String otch = rs.getString("Отчество");
-            }
-            rs.close();
-            st.close();
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-    }
-    void delete(){
-        try {
-            System.out.println("Какую строку удалить?");
-            int id = data.nextInt();
-            Statement st = co.createStatement();
-            int id1 = id - 1;
-            String delete = "DELETE FROM users WHERE id = " + id;
-            String resets = "UPDATE sqlite_sequence SET seq = " + id1 + " WHERE name = 'users'";
-            int deleted_row = st.executeUpdate(delete);
-            int reset = st.executeUpdate(resets);
-            System.out.println("\n");
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-    }
     String valid_name(String name){
         String get_name = "";
         try {
