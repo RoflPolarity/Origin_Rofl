@@ -4,13 +4,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class vote {
     Main vote=new Main();
     save save1 = new save();
     Connection co;
+    Main1 arr = new Main1();
     GUI_1 gui = new GUI_1();
+    leonid len = new leonid();
     public  void vale (String name){
         String  out;
         try {
@@ -24,9 +27,10 @@ public class vote {
         catch (Exception e){
 
         }
+
         JFrame frame = new JFrame("Выбор класса");
         JPanel panel = new JPanel();
-
+        String[][] tebledata = arr.transformArrayList(arr.getNames());
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JMenu newMenu = new JMenu("Новый файл");
@@ -39,7 +43,11 @@ public class vote {
         openItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    len.main(save1.read_teable(tebledata));
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
         fileMenu.add(openItem);
@@ -57,6 +65,7 @@ public class vote {
         panel.add(comboBox);
 
         menuBar.add(fileMenu);
+        frame.setResizable(false);
         frame.add(new JButton("Далее"), "South");
         frame.setBounds(dimension.width/2 - 150, dimension.height/2 - 75, 300,150);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
