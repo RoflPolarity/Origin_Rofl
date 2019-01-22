@@ -25,6 +25,21 @@ public class vote {
         JFrame frame = new JFrame("Выбор класса");
         JPanel panel = new JPanel();
         frame.add(panel);
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("Файл");
+        JMenu newMenu = new JMenu("Новый файл");
+        fileMenu.add(newMenu);
+        JMenuItem txtFileItem = new JMenuItem("Текстовый файл");
+        newMenu.add(txtFileItem);
+        JMenuItem imgFileItem = new JMenuItem("Изображение");
+        newMenu.add(imgFileItem);
+        JMenuItem openItem = new JMenuItem("Открыть");
+        fileMenu.add(openItem);
+        fileMenu.addSeparator();
+        JMenuItem closeItem = new JMenuItem("Выйти");
+        fileMenu.add(closeItem);
+        JMenuItem closeAllItem = new JMenuItem("Сохранить и выйти");
+        fileMenu.add(closeAllItem);
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
         frame.setBounds(dimension.width/2 - 250, dimension.height/2 - 150, 500,300);
@@ -32,6 +47,9 @@ public class vote {
         String[] items = {"Leonid","Valechka","Artyom"};
         JComboBox comboBox = new JComboBox(items);
         panel.add(comboBox);
+        menuBar.add(fileMenu);
+
+        frame.setJMenuBar(menuBar);
         frame.setVisible(true);
     }
 }
