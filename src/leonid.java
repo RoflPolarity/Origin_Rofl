@@ -20,16 +20,11 @@ public class leonid  {
     public static void main(String[] args){
          leonid len = new leonid();
          save save1 = new save();
-        Timer timer1 = new Timer(500, new ActionListener() {
+        Timer timer1 = new Timer(10000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                len.join(tebledata);
-                try {
-                    save1.update_table(tebledata);
-                } catch (SQLException e1) {
-                    e1.printStackTrace();
-                }
+
             }
         });
         JFrame frame = new JFrame ("Legion");

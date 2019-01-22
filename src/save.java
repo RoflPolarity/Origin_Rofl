@@ -20,25 +20,23 @@ public class save {
 
 
         void update_table(String [] [] array) throws SQLException{
-            Integer args [] = new Integer[13];
-            for (int i = 0; i<args.length; i++){
+            Integer args [] = new Integer[14];
 
-            }
             for (int b = 0; b<array.length;b++){
-                if (array[b][1].equals("")){array[b][1] = "0";}
-                if (array[b][2].equals("")){array[b][2] = "0";}
-                if (array[b][3].equals("")){array[b][3] = "0";}
-                if (array[b][4].equals("")){array[b][4] = "0";}
-                if (array[b][5].equals("")){array[b][5] = "0";}
-                if (array[b][6].equals("")){array[b][6] = "0";}
-                if (array[b][7].equals("")){array[b][7] = "0";}
-                if (array[b][8].equals("")){array[b][8] = "0";}
-                if (array[b][9].equals("")){array[b][9] = "0";}
-                if (array[b][10].equals("")){array[b][10] = "0";}
-                if (array[b][11].equals("")){array[b][11] = "0";}
-                if (array[b][12].equals("")){array[b][12] = "0";}
-                if (array[b][13].equals("")){array[b][13] = "0";}
-                query = "UPDATE '11А' SET Русскийязык = " + array[b][1] + ", Алгебра = " + array[b][2] + ", Геометрия = " + array[b][3] + ", Химия =" + array[b][4] + ", Физика = " + array[b][5] + ", Литература =" + array[b][6] + ", География  =" + array[b][7] + ", Искусство =" + array[b][8] + ", Физра = " + array[b][9] + ", Информатика =" + array[b][10] + ", English = " + array[b][11] + ", Обществознание = " + array[b][12] + ", История = " + array[b][13] + "WHERE ФИО ='" + array[b][0] +"'";
+                    if (array[b][1].equals("")){args[0] = 0;}else args[0] = Integer.parseInt(array[b][1]);
+                    if (array[b][2].equals("")){args[1] = 0;}else args[1] = Integer.parseInt(array[b][2]);
+                    if (array[b][3].equals("")){args[2] = 0;}else args[2] = Integer.parseInt(array[b][3]);
+                    if (array[b][4].equals("")){args[3] = 0;}else args[3] = Integer.parseInt(array[b][4]);
+                    if (array[b][5].equals("")){args[4] = 0;}else args[4] = Integer.parseInt(array[b][5]);
+                    if (array[b][6].equals("")){args[5] = 0;}else args[5] = Integer.parseInt(array[b][6]);
+                    if (array[b][7].equals("")){args[6] = 0;}else args[6] = Integer.parseInt(array[b][7]);
+                    if (array[b][8].equals("")){args[7] = 0;}else args[7] = Integer.parseInt(array[b][8]);
+                    if (array[b][9].equals("")){args[8] = 0;}else args[8] = Integer.parseInt(array[b][9]);
+                    if (array[b][10].equals("")){args[9] = 0;}else args[9] = Integer.parseInt(array[b][10]);
+                    if (array[b][11].equals("")){args[10] = 0;}else args[10] = Integer.parseInt(array[b][11]);
+                    if (array[b][12].equals("")){args[11] = 0;}else args[11] = Integer.parseInt(array[b][12]);
+                    if (array[b][13].equals("")){args[12] = 0;}else args[12] = Integer.parseInt(array[b][13]);
+                query = "UPDATE '11А' SET Русскийязык = " + args[0] + ", Алгебра = " + args[1] + ", Геометрия = " + args[2] + ", Химия =" + args[3] + ", Физика = " + args[4] + ", Литература =" + args[5] + ", География  =" + args[6] + ", Искусство =" + args[7] + ", Физра = " + args[8] + ", Информатика =" + args[9] + ", English = " + args[10] + ", Обществознание = " + args[12] + ", История = " + args[13] + " WHERE ФИО ='" + array[b][0] +"'";
                 int a = prog.connection_Update(query);
             }
         }
