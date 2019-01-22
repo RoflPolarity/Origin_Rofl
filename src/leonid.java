@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.text.View;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,13 +13,13 @@ import java.util.EventListener;
 
 //.
 public class leonid  {
-
     private static String [] [] tebledata;
     static Toolkit kit = Toolkit.getDefaultToolkit();
     static Dimension size = kit.getScreenSize();
-    public static void main(String[] args){
+    public static void main(String[][] tebledata){
          leonid len = new leonid();
          save save1 = new save();
+         Main1 arr = new Main1();
         Timer timer1 = new Timer(10000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
@@ -44,52 +43,28 @@ public class leonid  {
         fileMenu.add(closeItem);
         JMenuItem closeAllItem = new JMenuItem("Сохранить и выйти");
         fileMenu.add(closeAllItem);
-
-
-
-        // меню-флажки
-        //JMenu newviewMenu = new JMenu("Вид");
-
-            //JCheckBoxMenuItem line = new JCheckBoxMenuItem("Линейка");
-           // JCheckBoxMenuItem grid = new JCheckBoxMenuItem("Сетка");
-            //JCheckBoxMenuItem naig = new JCheckBoxMenuItem("Навигация");
-            // меню-переключатели
-           // JRadioButtonMenuItem one = new JRadioButtonMenuItem("Одна страница");
-           // JRadioButtonMenuItem two = new JRadioButtonMenuItem("Две страницы");
-            // организуем переключатели в логическую группу
-           // ButtonGroup bg = new ButtonGroup();
-           // bg.add(one);
-           // bg.add(two);
-            // добавим все в меню
-           // newviewMenu.add(line);
-           // newviewMenu.add(grid);
-           // newviewMenu.add(naig);
-            // разделитель можно создать и явно
-           // newviewMenu.add(new JSeparator());
-           // newviewMenu.add(one);
-           // newviewMenu.add(two);
-
-
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
-        frame.setBounds(dimension.width/2, dimension.height/2, 1300,300);
+        frame.setBounds(dimension.width/2, dimension.height/2 - 150, 1300,300);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-        JPanel Button1 = new JPanel(new GridLayout(1, 2, 5, 0) );
-        Button1.add (new JButton("Назад"    ));
-        Button1.add (new JButton("Сформировать отчет"));
-        JPanel flow = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        flow.add(Button1);
-        Container container = frame.getContentPane();
-        container.add(flow, BorderLayout.SOUTH);
-        Main1 arr = new Main1();
+        frame.setLayout(new GridBagLayout());
+
             String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
+        JButton deleteButton = new JButton("Назад");
+        JButton clearButton = new JButton("Сформировать отчет");
         BookTableModel btm = new BookTableModel();
         tebledata = arr.transformArrayList(arr.getNames());
         JTable bookTable = new JTable(tebledata,names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(1100,250));
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
+        String[][] finalTebledata = tebledata;
         frame.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {
@@ -99,7 +74,7 @@ public class leonid  {
             @Override
             public void windowClosing(WindowEvent e) {
                 try {
-                    save1.update_table(len.join(tebledata));
+                    save1.update_table(len.join(finalTebledata));
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
@@ -130,12 +105,18 @@ public class leonid  {
 
             }
         });
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
         timer1.start();
         frame.add(bookTableScrollPane);
         menuBar.add(fileMenu);
         frame.setJMenuBar(menuBar);
-        //newviewMenu.add(fileMenu);
-        //frame.setJMenuBar(newviewMenu);
+        frame.add(deleteButton);
+        frame.add(clearButton);
         frame.setVisible(true);
         frame.pack();
         frame.revalidate();
