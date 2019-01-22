@@ -3,6 +3,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ForkJoinPool;
 
 public class save {
     Main prog = new Main();
@@ -17,8 +18,6 @@ public class save {
                 prog.connection_execute(query);
                 }
             }
-
-
         void update_table(String [] [] array) throws SQLException{
             Integer args [] = new Integer[14];
             for (int b = 0; b<array.length;b++){
@@ -35,11 +34,63 @@ public class save {
                     if (array[b][11].equals("")){args[10] = 0;}else args[10] = Integer.parseInt(array[b][11]);
                     if (array[b][12].equals("")){args[11] = 0;}else args[11] = Integer.parseInt(array[b][12]);
                     if (array[b][13].equals("")){args[12] = 0;}else args[12] = Integer.parseInt(array[b][13]);
+                    if (array[b][14].equals("")){args[13] = 0;}else args[13] = Integer.parseInt(array[b][14]);
                 query = "UPDATE '11А' SET Русскийязык = " + args[0] + ", Алгебра = " + args[1] + ", Геометрия = " + args[2] + ", Химия =" + args[3] + ", Физика = " + args[4] + ", Литература =" + args[5] + ", География  =" + args[6] + ", Искусство =" + args[7] + ", Физра = " + args[8] + ", Информатика =" + args[9] + ", English = " + args[10] + ", Обществознание = " + args[12] + ", История = " + args[13] + " WHERE ФИО ='" + array[b][0] +"'";
                 int a = prog.connection_Update(query);
             }
         }
-        void read_teable (String[][] array) throws IOException {
-
+        String [][] read_teable (String[][] array)throws SQLException {
+            prog.open();
+            query = "SELECT * FROM" + "'"+"11А"+"'";
+            ResultSet rs = prog.connection_Query(query);
+            String FIO[] = new String[array.length];
+            String ocenki[] = new String[13];
+            for (int i =0;rs.next();i++){
+                FIO[i] = rs.getString("ФИО");
+                ocenki[0] = rs.getString("Русскийязык");
+                ocenki[1] = rs.getString("Алгебра");
+                ocenki[2] = rs.getString("Геометрия");
+                ocenki[3] = rs.getString("Химия");
+                ocenki[4] = rs.getString("Физика");
+                ocenki[5] = rs.getString("Литература");
+                ocenki[6] = rs.getString("География");
+                ocenki[7] = rs.getString("Искусство");
+                ocenki[8] = rs.getString("Физра");
+                ocenki[9] = rs.getString("Информатика");
+                ocenki[10] = rs.getString("English");
+                ocenki[11] = rs.getString("Обществознание");
+                ocenki[12] = rs.getString("История");
+            }
+            for (int b = 0; b<array.length;b++){
+                if (ocenki[0].equals("0"))ocenki[0] = "";
+                if (ocenki[1].equals("0"))ocenki[1] = "";
+                if (ocenki[2].equals("0"))ocenki[2] = "";
+                if (ocenki[3].equals("0"))ocenki[3] = "";
+                if (ocenki[4].equals("0"))ocenki[4] = "";
+                if (ocenki[5].equals("0"))ocenki[5] = "";
+                if (ocenki[6].equals("0"))ocenki[6] = "";
+                if (ocenki[7].equals("0"))ocenki[7] = "";
+                if (ocenki[8].equals("0"))ocenki[8] = "";
+                if (ocenki[9].equals("0"))ocenki[9] = "";
+                if (ocenki[10].equals("0"))ocenki[10] = "";
+                if (ocenki[11].equals("0"))ocenki[11] = "";
+                if (ocenki[12].equals("0"))ocenki[12] = "";
+                array[b][0] = FIO[b];
+                array[b][1] = ocenki[0];
+                array[b][2] = ocenki[1];
+                array[b][3] = ocenki[2];
+                array[b][4] = ocenki[3];
+                array[b][5] = ocenki[4];
+                array[b][6] = ocenki[5];
+                array[b][7] = ocenki[6];
+                array[b][8] = ocenki[7];
+                array[b][9] = ocenki[8];
+                array[b][10] = ocenki[9];
+                array[b][11] = ocenki[10];
+                array[b][12] = ocenki[11];
+                array[b][13] = ocenki[12];
+            }
+            prog.close();
+          return array;
         }
 }

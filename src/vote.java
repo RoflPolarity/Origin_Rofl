@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -7,6 +8,7 @@ import java.sql.Statement;
 
 public class vote {
     Main vote=new Main();
+    save save1 = new save();
     Connection co;
     GUI_1 gui = new GUI_1();
     public  void vale (String name){
@@ -34,6 +36,12 @@ public class vote {
         JMenuItem imgFileItem = new JMenuItem("Изображение");
         newMenu.add(imgFileItem);
         JMenuItem openItem = new JMenuItem("Открыть");
+        openItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
         fileMenu.add(openItem);
         fileMenu.addSeparator();
         JMenuItem closeItem = new JMenuItem("Выйти");
