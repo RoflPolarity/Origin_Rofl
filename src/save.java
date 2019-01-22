@@ -34,6 +34,7 @@ public class save {
                     if (array[b][11].equals("")){args[10] = 0;}else args[10] = Integer.parseInt(array[b][11]);
                     if (array[b][12].equals("")){args[11] = 0;}else args[11] = Integer.parseInt(array[b][12]);
                     if (array[b][13].equals("")){args[12] = 0;}else args[12] = Integer.parseInt(array[b][13]);
+                    if (array[b][14].equals("")){args[13] = 0;}else args[13] = Integer.parseInt(array[b][14]);
                 query = "UPDATE '11А' SET Русскийязык = " + args[0] + ", Алгебра = " + args[1] + ", Геометрия = " + args[2] + ", Химия =" + args[3] + ", Физика = " + args[4] + ", Литература =" + args[5] + ", География  =" + args[6] + ", Искусство =" + args[7] + ", Физра = " + args[8] + ", Информатика =" + args[9] + ", English = " + args[10] + ", Обществознание = " + args[12] + ", История = " + args[13] + " WHERE ФИО ='" + array[b][0] +"'";
                 int a = prog.connection_Update(query);
             }
@@ -43,7 +44,7 @@ public class save {
             query = "SELECT * FROM" + "'"+"11А"+"'";
             ResultSet rs = prog.connection_Query(query);
             String FIO[] = new String[array.length];
-            String ocenki[] = new String[13];
+            String ocenki[] = new String[14];
             for (int i =0;rs.next();i++){
                 FIO[i] = rs.getString("ФИО");
                 ocenki[0] = rs.getString("Русскийязык");
@@ -88,6 +89,7 @@ public class save {
                 array[b][11] = ocenki[10];
                 array[b][12] = ocenki[11];
                 array[b][13] = ocenki[12];
+
             }
             prog.close();
           return array;

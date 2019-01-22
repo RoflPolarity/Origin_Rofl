@@ -13,13 +13,12 @@ import java.util.EventListener;
 
 //.
 public class leonid  {
-    private static String [] [] tebledata;
     static Toolkit kit = Toolkit.getDefaultToolkit();
     static Dimension size = kit.getScreenSize();
-    public static void main(String[][] tebledata){
+    public static void main(String[][] tabled){
+        JFrame frame = new JFrame ("Legion");
          leonid len = new leonid();
          save save1 = new save();
-         Main1 arr = new Main1();
         Timer timer1 = new Timer(10000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
@@ -27,9 +26,10 @@ public class leonid  {
 
             }
         });
-        JFrame frame = new JFrame ("Legion");
+
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
+        JPanel panel = new JPanel();
         JMenu newMenu = new JMenu("Новый файл");
         fileMenu.add(newMenu);
         JMenuItem txtFileItem = new JMenuItem("Текстовый файл");
@@ -50,13 +50,11 @@ public class leonid  {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setLayout(new GridBagLayout());
-
-            String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
+        Main1 arr = new Main1();
+        String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
         JButton deleteButton = new JButton("Назад");
         JButton clearButton = new JButton("Сформировать отчет");
-        BookTableModel btm = new BookTableModel();
-        tebledata = arr.transformArrayList(arr.getNames());
-        JTable bookTable = new JTable(tebledata,names);
+        JTable bookTable = new JTable(tabled,names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(1100,250));
         clearButton.addActionListener(new ActionListener() {
@@ -64,7 +62,6 @@ public class leonid  {
             public void actionPerformed(ActionEvent e) {
             }
         });
-        String[][] finalTebledata = tebledata;
         frame.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {
@@ -74,7 +71,7 @@ public class leonid  {
             @Override
             public void windowClosing(WindowEvent e) {
                 try {
-                    save1.update_table(len.join(finalTebledata));
+                    save1.update_table(len.join(tabled));
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
@@ -111,13 +108,13 @@ public class leonid  {
 
             }
         });
+        frame.setVisible(true);
         timer1.start();
         frame.add(bookTableScrollPane);
         menuBar.add(fileMenu);
         frame.setJMenuBar(menuBar);
         frame.add(deleteButton);
         frame.add(clearButton);
-        frame.setVisible(true);
         frame.pack();
         frame.revalidate();
     }
