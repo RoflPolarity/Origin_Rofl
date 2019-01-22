@@ -13,7 +13,6 @@ public class vote {
     Connection co;
     Main1 arr = new Main1();
     GUI_1 gui = new GUI_1();
-    leonid len = new leonid();
     public  void vale (String name){
         String  out;
         try {
@@ -30,7 +29,12 @@ public class vote {
 
         JFrame frame = new JFrame("Выбор класса");
         JPanel panel = new JPanel();
-        String[][] tebledata = arr.transformArrayList(arr.getNames());
+        String[][] tebledata = new String[0][];
+        try {
+            tebledata = save1.read_teable(arr.transformArrayList(arr.getNames()));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JMenu newMenu = new JMenu("Новый файл");
@@ -40,11 +44,12 @@ public class vote {
         JMenuItem imgFileItem = new JMenuItem("Изображение");
         newMenu.add(imgFileItem);
         JMenuItem openItem = new JMenuItem("Открыть");
+        String[][] finalTebledata = tebledata;
         openItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    len.main(save1.read_teable(tebledata));
+                    leonid.main(save1.read_teable(finalTebledata));
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
@@ -64,9 +69,18 @@ public class vote {
         JComboBox comboBox = new JComboBox(items);
         panel.add(comboBox);
 
+        JButton jbt = new JButton("Далее");
         menuBar.add(fileMenu);
         frame.setResizable(false);
-        frame.add(new JButton("Далее"), "South");
+        panel.add(jbt);
+        jbt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (comboBox.getSelectedItem().equals("11A")){
+                    leonid.main(arr.transformArrayList(arr.getNames()));
+                }
+            }
+        });
         frame.setBounds(dimension.width/2 - 150, dimension.height/2 - 75, 300,150);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel);
