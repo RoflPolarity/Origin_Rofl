@@ -28,6 +28,21 @@ public class leonid  {
             }
         });
         JFrame frame = new JFrame ("Legion");
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("Файл");
+        JMenu newMenu = new JMenu("Новый файл");
+        fileMenu.add(newMenu);
+        JMenuItem txtFileItem = new JMenuItem("Текстовый файл");
+        newMenu.add(txtFileItem);
+        JMenuItem imgFileItem = new JMenuItem("Изображение");
+        newMenu.add(imgFileItem);
+        JMenuItem openItem = new JMenuItem("Открыть");
+        fileMenu.add(openItem);
+        fileMenu.addSeparator();
+        JMenuItem closeItem = new JMenuItem("Выйти");
+        fileMenu.add(closeItem);
+        JMenuItem closeAllItem = new JMenuItem("Сохранить и выйти");
+        fileMenu.add(closeAllItem);
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
         frame.setBounds(dimension.width/2, dimension.height/2 - 150, 1300,300);
@@ -101,6 +116,8 @@ public class leonid  {
         });
         timer1.start();
         frame.add(bookTableScrollPane);
+        menuBar.add(fileMenu);
+        frame.setJMenuBar(menuBar);
         frame.add(deleteButton);
         frame.add(clearButton);
         frame.setVisible(true);

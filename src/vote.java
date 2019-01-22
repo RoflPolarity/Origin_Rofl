@@ -24,7 +24,7 @@ public class vote {
         }
         JFrame frame = new JFrame("Выбор класса");
         JPanel panel = new JPanel();
-        frame.add(panel);
+
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JMenu newMenu = new JMenu("Новый файл");
@@ -40,15 +40,19 @@ public class vote {
         fileMenu.add(closeItem);
         JMenuItem closeAllItem = new JMenuItem("Сохранить и выйти");
         fileMenu.add(closeAllItem);
+
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
-        frame.setBounds(dimension.width/2 - 250, dimension.height/2 - 150, 500,300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        String[] items = {"Leonid","Valechka","Artyom"};
+
+        String[] items = {"11A","11Б","10А"};
         JComboBox comboBox = new JComboBox(items);
         panel.add(comboBox);
-        menuBar.add(fileMenu);
 
+        menuBar.add(fileMenu);
+        frame.add(new JButton("Далее"), "South");
+        frame.setBounds(dimension.width/2 - 150, dimension.height/2 - 75, 300,150);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(panel);
         frame.setJMenuBar(menuBar);
         frame.setVisible(true);
     }
