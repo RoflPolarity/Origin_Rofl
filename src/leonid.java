@@ -47,11 +47,6 @@ public class leonid  {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    save1.save_table(tebledata);
-                } catch (SQLException e1) {
-                    e1.printStackTrace();
-                }
             }
         });
         frame.addWindowListener(new WindowListener() {
@@ -62,9 +57,8 @@ public class leonid  {
 
             @Override
             public void windowClosing(WindowEvent e) {
-
                 try {
-                    save1.save_table(len.join(tebledata));
+                    save1.update_table(len.join(tebledata));
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }

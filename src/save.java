@@ -21,7 +21,6 @@ public class save {
 
         void update_table(String [] [] array) throws SQLException{
             Integer args [] = new Integer[14];
-
             for (int b = 0; b<array.length;b++){
                     if (array[b][1].equals("")){args[0] = 0;}else args[0] = Integer.parseInt(array[b][1]);
                     if (array[b][2].equals("")){args[1] = 0;}else args[1] = Integer.parseInt(array[b][2]);
