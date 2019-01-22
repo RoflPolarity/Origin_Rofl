@@ -107,11 +107,7 @@ public class leonid  {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    save1.read_teable(tebledata);
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
+
             }
         });
         timer1.start();
