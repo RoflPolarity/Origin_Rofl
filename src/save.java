@@ -60,8 +60,6 @@ public class save {
                 ocenki[10] = rs.getString("English");
                 ocenki[11] = rs.getString("Обществознание");
                 ocenki[12] = rs.getString("История");
-            }
-            for (int b = 0; b<array.length;b++){
                 if (ocenki[0].equals("0"))ocenki[0] = "";
                 if (ocenki[1].equals("0"))ocenki[1] = "";
                 if (ocenki[2].equals("0"))ocenki[2] = "";
@@ -75,21 +73,20 @@ public class save {
                 if (ocenki[10].equals("0"))ocenki[10] = "";
                 if (ocenki[11].equals("0"))ocenki[11] = "";
                 if (ocenki[12].equals("0"))ocenki[12] = "";
-                array[b][0] = FIO[b];
-                array[b][1] = ocenki[0];
-                array[b][2] = ocenki[1];
-                array[b][3] = ocenki[2];
-                array[b][4] = ocenki[3];
-                array[b][5] = ocenki[4];
-                array[b][6] = ocenki[5];
-                array[b][7] = ocenki[6];
-                array[b][8] = ocenki[7];
-                array[b][9] = ocenki[8];
-                array[b][10] = ocenki[9];
-                array[b][11] = ocenki[10];
-                array[b][12] = ocenki[11];
-                array[b][13] = ocenki[12];
-
+                array[i][0] = FIO[i];
+                array[i][1] = ocenki[0];
+                array[i][2] = ocenki[1];
+                array[i][3] = ocenki[2];
+                array[i][4] = ocenki[3];
+                array[i][5] = ocenki[4];
+                array[i][6] = ocenki[5];
+                array[i][7] = ocenki[6];
+                array[i][8] = ocenki[7];
+                array[i][9] = ocenki[8];
+                array[i][10] = ocenki[9];
+                array[i][11] = ocenki[10];
+                array[i][12] = ocenki[11];
+                array[i][13] = ocenki[12];
             }
             prog.close();
           return array;
