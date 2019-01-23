@@ -37,6 +37,7 @@ class GUI_1 {
         panel.add(name);
         panel.add(username);
         panel.add(button_a);
+        frame.pack();
         button_a.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
