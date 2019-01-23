@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c5802829-06f7-4b7d-8142-aca6f1077c64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/users.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/legion/GUI_1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/GUI_1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/legion/GUI_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/GUI_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,12 +46,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8596" />
+          <entry key="java" value="8597" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8596" />
+          <entry key="JAVA" value="8597" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -73,11 +70,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/save.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="69" column="59" lean-forward="true" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="59" />
+            <state relative-caret-position="85">
+              <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
               <folding>
                 <element signature="method#save_table#0;class#save#0" />
                 <element signature="method#update_table#0;class#save#0" />
@@ -89,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state>
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI_1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
@@ -159,12 +156,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/Row.java" />
         <option value="$PROJECT_DIR$/src/BookTableModel.java" />
-        <option value="$PROJECT_DIR$/src/Main1.java" />
         <option value="$PROJECT_DIR$/src/leonid.java" />
-        <option value="$PROJECT_DIR$/src/save.java" />
         <option value="$PROJECT_DIR$/src/vote.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GUI_1.java" />
+        <option value="$PROJECT_DIR$/src/save.java" />
+        <option value="$PROJECT_DIR$/src/Main1.java" />
       </list>
     </option>
   </component>
@@ -218,7 +215,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548268188643" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548268329676" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -300,7 +297,7 @@
       <workItem from="1548072281003" duration="27512000" />
       <workItem from="1548173939544" duration="1356000" />
       <workItem from="1548185682315" duration="3236000" />
-      <workItem from="1548262888535" duration="5163000" />
+      <workItem from="1548262888535" duration="5412000" />
     </task>
     <task id="LOCAL-00001" summary="Казахи сосут">
       <created>1547400553808</created>
@@ -456,11 +453,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548267793380</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Table">
+      <created>1548268208091</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1548268208091</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73661000" />
+    <option name="totallyTimeSpent" value="73910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -674,6 +678,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/save.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
+          <folding>
+            <element signature="method#save_table#0;class#save#0" />
+            <element signature="method#update_table#0;class#save#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -691,8 +706,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state>
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -713,17 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/save.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="69" column="59" lean-forward="true" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="59" />
-          <folding>
-            <element signature="method#save_table#0;class#save#0" />
-            <element signature="method#update_table#0;class#save#0" />
-          </folding>
         </state>
       </provider>
     </entry>

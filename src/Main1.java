@@ -2,7 +2,6 @@
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 public class Main1 {
     Connection co;
     boolean open(){//Функция коннекта к БД
