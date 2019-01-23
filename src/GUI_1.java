@@ -39,7 +39,7 @@ class GUI_1 {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (username.getText().equals("")) {
-                    username.setText("Введите текст");
+                    System.out.println("Введите текст");
                 } else {
                     for (int i=0;i<teach.size();i++){
                             if (username.getText().equals(teach.get(i))){
