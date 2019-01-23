@@ -2,33 +2,23 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
+import java.util.ArrayList;
 public class vote {
     Main vote=new Main();
     save save1 = new save();
     Main1 arr = new Main1();
-    Connection co;
-    GUI_1 gui = new GUI_1();
-    public  void vale (String name){
+        public  void vale (String name) throws SQLException {
         String  out;
-        try {
             vote.open();
-        Statement st = co.createStatement();
-        String query = "SELECT Классы FROM teach WHERE Имя = " + "'" + name +"'";
-        ResultSet rs = st.executeQuery(query);
+        ResultSet rs = vote.connection_Query("SELECT Классы FROM teach WHERE Имя = " + "'" + name +"'");
         String classes = rs.getString("Классы");
+            vote.close();
         String [] words = classes.split(",");
-        }
-        catch (Exception e){
-
-        }
         JFrame frame = new JFrame("Выбор класса");
         JPanel panel = new JPanel();
-
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JMenu newMenu = new JMenu("Новый файл");
@@ -59,17 +49,21 @@ public class vote {
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
+        ArrayList <String> classes1 = new ArrayList<String>();
 
-        String[] items = {"11A","11Б","10А"};
-        JComboBox comboBox = new JComboBox(items);
+        JComboBox comboBox = new JComboBox(words);
         panel.add(comboBox);
         JButton jbt = new JButton("Далее");
 
         jbt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(comboBox.getSelectedItem().equals("11A")){
+                if(comboBox.getSelectedItem().equals(words[0])){
                         leonid.main(tabledata);
+                }else if (comboBox.getSelectedItem().equals(words[1])){
+                    System.out.println("Этот класс еще не готов(");
+                }else if (comboBox.getSelectedItem().equals(words[2])){
+                    System.out.println("Этот касс еще не готов");
                 }
             }
         });

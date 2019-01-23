@@ -1,10 +1,5 @@
-import java.io.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ForkJoinPool;
-
 public class save {
     Main prog = new Main();
     private String query;

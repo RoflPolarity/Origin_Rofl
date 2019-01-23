@@ -9,7 +9,11 @@ public class Main {
         Main program = new Main();
         program.open();
         GUI_1 gui = new GUI_1();
-        gui.main_GUI();
+        try {
+            gui.main_GUI();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     boolean open(){//Функция коннекта к БД
         try{
@@ -28,6 +32,7 @@ public class Main {
         return st.execute(query);
     }
     ResultSet connection_Query (String query) throws SQLException {
+        open();
             Statement st = co.createStatement();
             ResultSet rs = st.executeQuery(query);
             return rs;
