@@ -42,12 +42,13 @@ class GUI_1 {
                     System.out.println("Введите текст");
                 } else {
                     for (int i=0;i<teach.size();i++){
-                            if (username.getText().equals(teach.get(0))){
+                            if (username.getText().equals(teach.get(i))){
                                 String names = username.getText();
                                 frame.setVisible(false);
                                 try {
-                                    make.vale(names);
-                                } catch (SQLException e1) {
+                                    if (username.getText().equals(teach.get(i))){
+                                        make.vale(names);
+                                }} catch (SQLException e1) {
                                     e1.printStackTrace();
                                 }
                             } else {
