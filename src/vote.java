@@ -15,7 +15,6 @@ public class vote {
             vote.open();
         ResultSet rs = vote.connection_Query("SELECT Классы FROM teach WHERE Имя = " + "'" + name +"'");
         String classes = rs.getString("Классы");
-
         String [] words = classes.split(",");
         JFrame frame = new JFrame("Выбор класса");
         ImageIcon icon = new ImageIcon("src/legion2.png");
