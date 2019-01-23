@@ -16,6 +16,8 @@ class GUI_1 {
     void main_GUI() throws SQLException {
         vote make = new vote();
         JFrame frame = new JFrame();
+        ImageIcon icon = new ImageIcon("src/legion2.png");
+        frame.setIconImage(icon.getImage());
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

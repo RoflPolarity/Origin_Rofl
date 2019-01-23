@@ -13,6 +13,8 @@ public class leonid  {
     static Dimension size = kit.getScreenSize();
     public static void main(String[][] tabled){
         JFrame frame = new JFrame ("Legion");
+        ImageIcon icon = new ImageIcon("src/legion2.png");
+        frame.setIconImage(icon.getImage());
          leonid len = new leonid();
          save save1 = new save();
         Timer timer1 = new Timer(10000, new ActionListener() {
@@ -45,19 +47,19 @@ public class leonid  {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-        frame.setLayout(new GridBagLayout());
         Main1 arr = new Main1();
         String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
-        JButton deleteButton = new JButton("Назад");
-        JButton clearButton = new JButton("Сформировать отчет");
+        JPanel grid1 = new JPanel(new GridLayout(1, 2, 5, 0) );
+        grid1.add (new JButton("Назад"    ));
+        grid1.add (new JButton("Сформировать отчет"));
+        JPanel flow = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        flow.add(grid1);
+        frame.getContentPane();
+        frame.add(flow, BorderLayout.SOUTH);
         JTable bookTable = new JTable(tabled,names);
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(1100,250));
-        clearButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            }
-        });
+
         frame.addWindowListener(new WindowListener() {
             @Override
             public void windowOpened(WindowEvent e) {
@@ -98,19 +100,11 @@ public class leonid  {
 
             }
         });
-        clearButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         frame.setVisible(true);
         timer1.start();
         frame.add(bookTableScrollPane);
         menuBar.add(fileMenu);
         frame.setJMenuBar(menuBar);
-        frame.add(deleteButton);
-        frame.add(clearButton);
         frame.pack();
         frame.revalidate();
     }
