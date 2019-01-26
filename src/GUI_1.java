@@ -2,8 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,31 +11,32 @@ class GUI_1 {
     Toolkit kit = Toolkit.getDefaultToolkit();
     Dimension size = kit.getScreenSize();
     Main prog = new Main();
+    JButton button_a;
+    ArrayList<String> teach;
     void main_GUI() throws SQLException {
         vote make = new vote();
         JFrame frame = new JFrame();
         ImageIcon icon = new ImageIcon("src/legion2.png");
+        JPanel panel = new JPanel();
+        button_a = new JButton("Далее");
+        TextField username = new TextField(20);
+        JLabel name = new JLabel("Введите ваше имя");
+        teach = new ArrayList<>();
         frame.setIconImage(icon.getImage());
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        JPanel panel = new JPanel();
         frame.add(panel);
-        frame.setBounds(size.width / 2 - 250, size.height / 2 - 150, 250, 150);
-        JButton button_a = new JButton("Далее");
-        TextField username = new TextField(20);
-        JLabel name = new JLabel("Введите ваше имя");
-        username.setBackground(Color.lightGray);
-        String query = "SELECT Имя, Классы FROM teach;";
-        ResultSet rs = prog.connection_Query(query);
-        ArrayList<String> teach = new ArrayList<>();
-        while (rs.next()) {
-            teach.add(rs.getString("Имя"));
-        }
+        buttonColor();
+        panel.setVisible(true);
         panel.add(name);
+        name.setVisible(true);
         panel.add(username);
         panel.add(button_a);
         frame.pack();
+        frame.setBounds(size.width / 2 - 250, size.height / 2 - 150, 250, 150);
+        username.setBackground(Color.lightGray);
+        names();
         button_a.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,8 +60,16 @@ class GUI_1 {
                         }
                     }
             });
-        if (prog.open()) {
-            button_a.setBackground(Color.green);
-        } else button_a.setBackground(Color.red);
+
     }
+    ArrayList<String> names () throws SQLException {
+        ResultSet rs = prog.connection_Query("SELECT Имя, Классы FROM teach;");
+        while (rs.next()) {
+            teach.add(rs.getString("Имя"));
+        }
+        return teach;
+    }
+    void buttonColor (){if (prog.open()) {
+        button_a.setBackground(Color.green);
+    } else button_a.setBackground(Color.red);}
   }

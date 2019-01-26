@@ -2,20 +2,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
-    Scanner data = new Scanner(System.in);
     Connection co;
-    public static void main(String[] args) {
-        Scanner main =  new Scanner(System.in);
+
+    public static void main(String[] args) throws SQLException{
         Main program = new Main();
-        program.open();
         GUI_1 gui = new GUI_1();
-        try {
             gui.main_GUI();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
-    boolean open(){//Функция коннекта к БД
+    boolean open() {//Функция коннекта к БД
         try{
             Class.forName("org.sqlite.JDBC");
              co = DriverManager.getConnection("jdbc:sqlite:database\\users.db");
@@ -51,19 +45,6 @@ public class Main {
             System.out.println(e.getMessage());
         }
         }
-    String valid_name(String name){
-        String get_name = "";
-        try {
-            Statement state = co.createStatement();
-            String query_name = "SELECT Имя, Классы FROM teach";
-            ResultSet res = state.executeQuery(query_name);
-            if (res.getString("Имя").equals(name)){
-
-                get_name = res.getString("Классы");
-            }
-        }catch (Exception e){System.out.println(e.getMessage());}
-        return get_name;
-    }
     ArrayList<String> select_people (){
         ArrayList<String> array = new ArrayList<>();
         try {

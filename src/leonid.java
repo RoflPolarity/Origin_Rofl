@@ -1,7 +1,6 @@
-import javafx.geometry.VerticalDirection;
+
 
 import javax.swing.*;
-import javax.swing.table.TableCellRenderer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +18,7 @@ public class leonid  {
         ImageIcon icon = new ImageIcon("src/legion2.png");
         frame.setIconImage(icon.getImage());
          leonid len = new leonid();
+         calc calc1 = new calc();
          save save1 = new save();
         Timer timer1 = new Timer(10000, new ActionListener() {
             @Override
@@ -27,7 +27,6 @@ public class leonid  {
 
             }
         });
-
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JPanel panel = new JPanel();
@@ -53,8 +52,16 @@ public class leonid  {
         Main1 arr = new Main1();
         String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
         JPanel grid1 = new JPanel(new GridLayout(1, 2, 5, 0) );
-        grid1.add (new JButton("Назад"    ));
-        grid1.add (new JButton("Сформировать отчет"));
+        JButton jbt = new JButton("Сформировать отчет");
+        JButton jbt1 = new JButton("Назад");
+        jbt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                    calc1.calc1(tabled);
+            }
+        });
+        grid1.add (jbt1);
+        grid1.add (jbt);
         JPanel flow = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         flow.add(grid1);
         frame.getContentPane();

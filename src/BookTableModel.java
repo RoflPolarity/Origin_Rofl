@@ -1,5 +1,4 @@
 import javax.swing.table.AbstractTableModel;
-import java.util.ArrayList;
 
 public class BookTableModel extends AbstractTableModel {
     Main sel = new Main();
