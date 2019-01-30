@@ -10,6 +10,8 @@ public class vote {
     Main vote=new Main();
     save save1 = new save();
     Main1 arr = new Main1();
+    calc calc1 = new calc();
+    public String name;
         public  void vale (String name) throws SQLException {
         String  out;
             vote.open();
@@ -35,7 +37,7 @@ public class vote {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    leonid.main(save1.read_teable(tabledata));
+                    leonid.main(save1.read_teable(tabledata),null);
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
@@ -60,7 +62,7 @@ public class vote {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(comboBox.getSelectedItem().equals(words[0])){
-                        leonid.main(tabledata);
+                    leonid.main(tabledata,comboBox.getSelectedItem().toString());
                 }else if (comboBox.getSelectedItem().equals(words[1])){
                     System.out.println("Этот класс еще не готов(");
                 }else if (comboBox.getSelectedItem().equals(words[2])){
@@ -75,6 +77,7 @@ public class vote {
         frame.add(panel);
         frame.setJMenuBar(menuBar);
         frame.setVisible(true);
+        name = (String) comboBox.getSelectedItem();
         vote.close();
     }
 }

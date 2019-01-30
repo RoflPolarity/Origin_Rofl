@@ -1,7 +1,26 @@
-public class calc {
-private save save1 = new save();
-private Main1 newmain = new Main1();
-        public void calc1(String [][] arr) {
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+
+class calc {
+    public static void main(String[] args) {
+
+    }
+        void calc1(String[][] arr, String name) throws IOException {
+            Workbook wb = new HSSFWorkbook();
+            Sheet sh1 = wb.createSheet("Отчет");
+            Row row =sh1.createRow(1);
+            Cell cell = row.createCell(3);
+            cell.setCellValue("Рейтинг успеваемости учащихся " + name +" класса\n");
+            FileOutputStream fos = new FileOutputStream("Отчет.xls");
+            wb.write(fos);
+            fos.close();
                 for (int i = 0; i<arr.length; i++){
                    Integer [] ocenki = new Integer[]{0, 0, 0, 0};
                     if (arr[i][1].equals("2"))ocenki[0] = ocenki[0]+1;

@@ -6,14 +6,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.IOException;
 import java.sql.SQLException;
 
 
 
 public class leonid  {
     static Toolkit kit = Toolkit.getDefaultToolkit();
+    private static String[][] arrray;
+    public String[][] array;
     static Dimension size = kit.getScreenSize();
-    public static void main(String[][] tabled){
+    public static void main(String[][] tabled,String names1){
         JFrame frame = new JFrame ("Legion");
         ImageIcon icon = new ImageIcon("src/legion2.png");
         frame.setIconImage(icon.getImage());
@@ -27,6 +30,7 @@ public class leonid  {
 
             }
         });
+        arrray = tabled;
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JPanel panel = new JPanel();
@@ -57,7 +61,11 @@ public class leonid  {
         jbt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    calc1.calc1(tabled);
+                try {
+                    calc1.calc1(tabled,names1);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
         grid1.add (jbt1);
@@ -118,6 +126,7 @@ public class leonid  {
         frame.pack();
         frame.revalidate();
     }
+
     String [] [] join (String[][] array){
       return array;
     }
