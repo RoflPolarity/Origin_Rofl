@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -16,12 +17,18 @@ public class leonid  {
     private static String[][] arrray;
     public String[][] array;
     static Dimension size = kit.getScreenSize();
-    public static void main(String[][] tabled,String names1){
+    public static void main(String[][] tabled,String names1,String teachName){
         JFrame frame = new JFrame ("Legion");
         ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
          leonid len = new leonid();
-         save save1 = new save();
+        calc calc1 = null;
+        try {
+            calc1 = new calc();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        save save1 = new save();
         Timer timer1 = new Timer(10000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
@@ -57,16 +64,18 @@ public class leonid  {
         JPanel grid1 = new JPanel(new GridLayout(1, 2, 5, 0) );
         JButton jbt = new JButton("Сформировать отчет");
         JButton jbt1 = new JButton("Назад");
-       // jbt.addActionListener(new ActionListener() {
-           // @Override
-           // public void actionPerformed(ActionEvent e) {
-           //     try {
-        //            calc1.calc1(tabled,names1);
-        //        } catch (IOException e1) {
-        //            e1.printStackTrace();
-        //        }
-         //   }
-        //});
+        calc finalCalc = calc1;
+        jbt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    finalCalc.table(tabled,names1,teachName);
+                    finalCalc.calc1(tabled,names1,teachName);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
         grid1.add (jbt1);
         grid1.add (jbt);
         JPanel flow = new JPanel(new FlowLayout(FlowLayout.RIGHT));
