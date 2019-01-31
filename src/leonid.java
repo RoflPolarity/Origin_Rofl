@@ -19,7 +19,7 @@ public class leonid  {
     static Dimension size = kit.getScreenSize();
     public static void main(String[][] tabled,String names1,String teachName){
         JFrame frame = new JFrame ("Legion");
-        ImageIcon icon = new ImageIcon("src/legion2.png");
+        ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
          leonid len = new leonid();
         calc calc1 = null;
