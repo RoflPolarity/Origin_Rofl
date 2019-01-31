@@ -21,7 +21,6 @@ public class leonid  {
         ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
          leonid len = new leonid();
-         calc calc1 = new calc();
          save save1 = new save();
         Timer timer1 = new Timer(10000, new ActionListener() {
             @Override
@@ -58,16 +57,16 @@ public class leonid  {
         JPanel grid1 = new JPanel(new GridLayout(1, 2, 5, 0) );
         JButton jbt = new JButton("Сформировать отчет");
         JButton jbt1 = new JButton("Назад");
-        jbt.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    calc1.calc1(tabled,names1);
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-            }
-        });
+       // jbt.addActionListener(new ActionListener() {
+           // @Override
+           // public void actionPerformed(ActionEvent e) {
+           //     try {
+        //            calc1.calc1(tabled,names1);
+        //        } catch (IOException e1) {
+        //            e1.printStackTrace();
+        //        }
+         //   }
+        //});
         grid1.add (jbt1);
         grid1.add (jbt);
         JPanel flow = new JPanel(new FlowLayout(FlowLayout.RIGHT));

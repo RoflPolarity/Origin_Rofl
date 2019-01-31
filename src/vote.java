@@ -10,7 +10,6 @@ public class vote {
     Main vote=new Main();
     save save1 = new save();
     Main1 arr = new Main1();
-    calc calc1 = new calc();
     public String name;
         public  void vale (String name) throws SQLException {
         String  out;
@@ -56,6 +55,13 @@ public class vote {
 
         JComboBox comboBox = new JComboBox(words);
         panel.add(comboBox);
+        String[] items = {
+                    "1 триместр",
+                    "2 триместр",
+                    "3 триместр"
+            };
+            JComboBox comboBox1 = new JComboBox(items);
+        panel.add(comboBox1);
         JButton jbt = new JButton("Далее");
 
         jbt.addActionListener(new ActionListener() {
