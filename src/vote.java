@@ -10,6 +10,10 @@ public class vote {
     Main vote=new Main();
     save save1 = new save();
     Main1 arr = new Main1();
+
+    public String name;
+
+
         public  void vale (String name) throws SQLException {
             vote.open();
         ResultSet rs = vote.connection_Query("SELECT Классы FROM teach WHERE Имя = " + "'" + name +"'");
@@ -52,6 +56,13 @@ public class vote {
         Dimension dimension = toolkit.getScreenSize();
 
         panel.add(comboBox);
+        String[] items = {
+                    "1 триместр",
+                    "2 триместр",
+                    "3 триместр"
+            };
+            JComboBox comboBox1 = new JComboBox(items);
+        panel.add(comboBox1);
         JButton jbt = new JButton("Далее");
 
 
