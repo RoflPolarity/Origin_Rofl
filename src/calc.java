@@ -31,8 +31,41 @@ class calc {
         row = sh1.createRow(4);
         cell = row.createCell(8);
         cell.setCellValue("Классный руководитель: " + teachName);
-        wb.write(fos);
 
+        {
+            row = sh1.createRow(6);
+            row.setHeightInPoints(65);
+            cell = row.createCell(0);
+            cell.setCellValue("№ п/п\n");
+            cell = row.createCell(1);
+            cell.setCellValue("ФИО\nучащегося");
+            cell = row.createCell(2);
+            cell.setCellValue("кол-во троек");
+            cell = row.createCell(3);
+            cell.setCellValue("кол-во четверок");
+            cell = row.createCell(4);
+            cell.setCellValue("кол-во пятерок\n");
+            cell = row.createCell(5);
+            cell.setCellValue("кол-во двоек\n");
+            cell = row.createCell(6);
+            cell.setCellValue("с одной \"2\" и более\n");
+            cell = row.createCell(7);
+            cell.setCellValue("с одной \"3\"");
+            cell = row.createCell(8);
+            cell.setCellValue("с одной \"4\"\n");
+            cell = row.createCell(9);
+            cell.setCellValue("на \"4\" и \"5\"\n");
+            cell = row.createCell(10);
+            cell.setCellValue("на \"5\"\n");
+            cell = row.createCell(11);
+            cell.setCellValue("5");
+            cell = row.createCell(12);
+            cell.setCellValue("одна 4\n");
+            cell = row.createCell(13);
+            cell.setCellValue("на 4 и 5\n");
+            sh1.autoSizeColumn(1);
+            wb.write(fos);
+        }
     }
     void calc1(String[][] arr, String classNo,String teachName) throws IOException {
             for (int i = 0; i < arr.length; i++) {
