@@ -16,7 +16,7 @@ class GUI_1 {
     void main_GUI() throws SQLException {
         vote make = new vote();
         JFrame frame = new JFrame();
-        ImageIcon icon = new ImageIcon("src/legion2.png");
+        ImageIcon icon = new ImageIcon("legion2.png");
         JPanel panel = new JPanel();
         button_a = new JButton("Далее");
         TextField username = new TextField(20);

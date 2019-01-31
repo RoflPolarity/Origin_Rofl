@@ -19,7 +19,7 @@ public class vote {
         String classes = rs.getString("Классы");
         String [] words = classes.split(",");
         JFrame frame = new JFrame("Выбор класса");
-        ImageIcon icon = new ImageIcon("src/legion2.png");
+        ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
         JPanel panel = new JPanel();
         JMenuBar menuBar = new JMenuBar();
