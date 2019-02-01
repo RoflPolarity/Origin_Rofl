@@ -39,7 +39,7 @@ public class save {
             query = "SELECT * FROM" + "'"+"11А"+"'";
             ResultSet rs = prog.connection_Query(query);
             String FIO[] = new String[array.length];
-            String ocenki[] = new String[13];
+            String ocenki[] = new String[14];
             for (int i =0;rs.next();i++){
                 FIO[i] = rs.getString("ФИО");
                 ocenki[0] = rs.getString("Русскийязык");
@@ -68,6 +68,7 @@ public class save {
                 if (ocenki[10].equals("0"))ocenki[10] = "";
                 if (ocenki[11].equals("0"))ocenki[11] = "";
                 if (ocenki[12].equals("0"))ocenki[12] = "";
+                if (ocenki[13].equals("0"))ocenki[13] = "";
                 array[i][0] = FIO[i];
                 array[i][1] = ocenki[0];
                 array[i][2] = ocenki[1];
