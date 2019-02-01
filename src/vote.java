@@ -40,7 +40,7 @@ public class vote {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    leonid.main(save1.read_teable(tabledata),null,finalName);
+                    leonid.main(save1.read_teable(tabledata),null,finalName,null);
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
@@ -70,7 +70,7 @@ public class vote {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(comboBox.getSelectedItem().equals(words[0])){
-                    leonid.main(tabledata,comboBox.getSelectedItem().toString(), finalName);
+                    leonid.main(tabledata,comboBox.getSelectedItem().toString(), finalName,comboBox1.getSelectedItem().toString());
                 }else if (comboBox.getSelectedItem().equals(words[1])){
                     System.out.println("Этот класс еще не готов(");
                 }else if (comboBox.getSelectedItem().equals(words[2])){

@@ -13,6 +13,7 @@ class calc {
     Workbook wb = new HSSFWorkbook();
     Sheet sh1 = wb.createSheet("Отчет");
     FileOutputStream fos = new FileOutputStream("Отчет.xls");
+    String[]FIO;
     calc() throws FileNotFoundException {
     }
     void table (String[][] arr,String classNo,String teachName, String trim) throws IOException {
@@ -22,7 +23,7 @@ class calc {
 
         row = sh1.createRow(1);
         cell = row.createCell(4);
-        cell.setCellValue("Триместры ");
+        cell.setCellValue(trim + " 2018-19 уч.года");
 
         row = sh1.createRow(3);
         cell = row.createCell(2);
@@ -38,7 +39,7 @@ class calc {
             cell.setCellValue("№ п/п\n");
             cell = row.createCell(1);
             row.setHeightInPoints(35);
-            cell.setCellValue("ФИО" + "\n" + "учащегося");
+            cell.setCellValue("ФИО учащегося");
             cell = row.createCell(2);
             cell.setCellValue("кол-во \n троек");
             cell = row.createCell(3);
@@ -72,6 +73,7 @@ class calc {
     }
     void calc1(String[][] arr, String classNo,String teachName) throws IOException {
             for (int i = 0; i < arr.length; i++) {
+                FIO = arr[i][0].split(" ");
                 Integer[] ocenki = new Integer[]{0, 0, 0, 0};
                 if (arr[i][1].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][1].equals("3")) ocenki[1] = ocenki[1] + 1;
@@ -131,32 +133,33 @@ class calc {
                 if (arr[i][14].equals("5")) ocenki[3] = ocenki[3] + 1;
                 fos = new FileOutputStream("Отчет.xls");
                 Row row = sh1.createRow(7+i);
-                Cell cell = row.createCell(0);
+                Cell cell = row.createCell(1);
                 cell.setCellValue(arr[i][0]);
-                cell = row.createCell(1);
-                cell.setCellValue(ocenki[0]);
                 cell = row.createCell(2);
-                cell.setCellValue(ocenki[1]);
+                cell.setCellValue(ocenki[0]);
                 cell = row.createCell(3);
+                cell.setCellValue(ocenki[1]);
+                cell = row.createCell(4);
+                cell.setCellValue(ocenki[2]);
+                cell = row.createCell(5);
                 cell.setCellValue(ocenki[3]);
-                sh1.autoSizeColumn(0);
+                cell = row.createCell(0);
+                cell.setCellValue(1+i);
+                cell = row.createCell(6);
+                if (ocenki[0]>1)cell.setCellValue(FIO[0]);else cell.setCellValue("-");
+                cell = row.createCell(7);
+                if (ocenki[1]==1)cell.setCellValue(FIO[0]);else cell.setCellValue("-");
+                cell = row.createCell(8);
+                if (ocenki[2]==1)cell.setCellValue(FIO[0]);else cell.setCellValue("-");
+                cell = row.createCell(9);
+                if (ocenki[0]==0&&ocenki[1]==0)cell.setCellValue(FIO[0]);else cell.setCellValue("-");
+                cell = row.createCell(10);
+                if (ocenki[0]==0&&ocenki[1]==0&&ocenki[2]==0)cell.setCellValue(FIO[0]);else cell.setCellValue("-");
+                sh1.autoSizeColumn(9);
+                sh1.autoSizeColumn(1);
                 wb.write(fos);
                 fos.close();
-                System.out.println(ocenki[0] + " " + ocenki[1] + " " + ocenki[2] + " " + ocenki[3]);
-                if (ocenki[0] > 1) System.out.println(arr[i][0]);
-                else System.out.println(" - ");
-                if (ocenki[1] == 1) System.out.println(arr[i][0]);
-                else System.out.println(" - ");
-                if (ocenki[2] == 1) System.out.println(arr[i][0]);
-                else System.out.println(" - ");
-                if (ocenki[0] == 0 && ocenki[1] == 0) {
-                    System.out.println(arr[i][0]);
-                } else System.out.println(" - ");
-                if (ocenki[0] == 0 && ocenki[1] == 0 && ocenki[2] == 0) {
-                    System.out.println(arr[i][0]);
-                } else System.out.println(" - ");
             }
-
         fos.close();
         }
 }
