@@ -17,7 +17,7 @@ public class leonid  {
     private static String[][] arrray;
     public String[][] array;
     static Dimension size = kit.getScreenSize();
-    public static void main(String[][] tabled,String names1,String teachName){
+    public static void main(String[][] tabled,String names1,String teachName,String trim){
         JFrame frame = new JFrame ("Legion");
         ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
@@ -59,7 +59,6 @@ public class leonid  {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-        Main1 arr = new Main1();
         String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
         JPanel grid1 = new JPanel(new GridLayout(1, 2, 5, 0) );
         JButton jbt = new JButton("Сформировать отчет");
@@ -69,7 +68,7 @@ public class leonid  {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    finalCalc.table(tabled,names1,teachName);
+                    finalCalc.table(tabled,names1,teachName,trim);
                     finalCalc.calc1(tabled,names1,teachName);
                 } catch (IOException e1) {
                     e1.printStackTrace();
