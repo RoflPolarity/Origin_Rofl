@@ -3,10 +3,10 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
 
 
 class calc {
@@ -14,6 +14,8 @@ class calc {
     Sheet sh1 = wb.createSheet("Отчет");
     FileOutputStream fos = new FileOutputStream("Отчет.xls");
     String[]FIO;
+    public String predmet [];
+    private int [][] main;
     calc() throws FileNotFoundException {
     }
     void table (String[][] arr,String classNo,String teachName, String trim) throws IOException {
@@ -71,66 +73,81 @@ class calc {
             fos.close();
         }
     }
-    void calc1(String[][] arr, String classNo,String teachName) throws IOException {
-            for (int i = 0; i < arr.length; i++) {
+    int [][] calc1(String[][] arr, String classNo,String teachName) throws IOException {
+        main = new int[predmet.length][arr.length];
+        for (int i = 0; i < arr.length; i++) {
                 FIO = arr[i][0].split(" ");
                 Integer[] ocenki = new Integer[]{0, 0, 0, 0};
                 if (arr[i][1].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][1].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][1].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][1].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][0] = Integer.parseInt(arr[i][1]);
                 if (arr[i][2].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][2].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][2].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][2].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][1] = Integer.parseInt(arr[i][2]);
                 if (arr[i][3].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][3].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][3].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][3].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][2] = Integer.parseInt(arr[i][3]);
                 if (arr[i][4].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][4].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][4].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][4].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][3] = Integer.parseInt(arr[i][4]);
                 if (arr[i][5].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][5].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][5].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][5].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][4] = Integer.parseInt(arr[i][5]);
                 if (arr[i][6].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][6].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][6].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][6].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][4] = Integer.parseInt(arr[i][6]);
                 if (arr[i][7].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][7].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][7].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][7].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][5] = Integer.parseInt(arr[i][7]);
                 if (arr[i][8].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][8].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][8].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][8].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][6] = Integer.parseInt(arr[i][8]);
                 if (arr[i][9].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][9].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][9].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][9].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][7] = Integer.parseInt(arr[i][9]);
                 if (arr[i][10].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][10].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][10].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][10].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][8] = Integer.parseInt(arr[i][10]);
                 if (arr[i][11].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][11].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][11].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][11].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][9] = Integer.parseInt(arr[i][11]);
                 if (arr[i][12].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][12].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][12].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][12].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][10] = Integer.parseInt(arr[i][12]);
                 if (arr[i][13].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][13].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][13].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][13].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][11] = Integer.parseInt(arr[i][13]);
                 if (arr[i][14].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][14].equals("3")) ocenki[1] = ocenki[1] + 1;
                 if (arr[i][14].equals("4")) ocenki[2] = ocenki[2] + 1;
                 if (arr[i][14].equals("5")) ocenki[3] = ocenki[3] + 1;
+                main[i][12] = Integer.parseInt(arr[i][14]);
                 fos = new FileOutputStream("Отчет.xls");
                 Row row = sh1.createRow(7+i);
                 Cell cell = row.createCell(1);
@@ -167,5 +184,16 @@ class calc {
                 fos.close();
             }
         fos.close();
+        return main;
+    }
+    void calc2 (){
+        int [][] newMain = main;
+        Arrays.sort(newMain);
+        int [] col = new int[newMain.length];
+        for (int i = 0;i<newMain.length;i++){
+            if (newMain[i][1]==4)col[1]+=1;
+            if (newMain[i][2]==3)col[2]+=1;
+            if (newMain[i][3]==3)col[3]+=1;
         }
+    }
 }

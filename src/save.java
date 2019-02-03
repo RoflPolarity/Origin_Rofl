@@ -3,6 +3,7 @@ import java.sql.SQLException;
 public class save {
     Main prog = new Main();
     private String query;
+
         void save_table (String [] [] array) throws SQLException {
             query = "create table if not exists '11А'(id INTEGER PRIMARY KEY AUTOINCREMENT, ФИО TEXT , Русскийязык INTEGER,Алгебра INTEGER,Геометрия INTEGER,Химия INTEGER,Физика INTEGER, Литература INTEGER,География INTEGER, Искусство INTEGER,Физра INTEGER,Информатика INTEGER,English INTEGER ,Обществознание INTEGER ,История INTEGER )";
             Boolean check = prog.connection_execute(query);

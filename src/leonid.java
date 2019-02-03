@@ -68,6 +68,7 @@ public class leonid  {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    finalCalc.predmet = names;
                     finalCalc.table(tabled,names1,teachName,trim);
                     finalCalc.calc1(tabled,names1,teachName);
                 } catch (IOException e1) {
