@@ -1,5 +1,3 @@
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,15 +7,12 @@ import java.awt.event.WindowListener;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
-
-
-
-public class leonid  {
+class leonid  {
     static Toolkit kit = Toolkit.getDefaultToolkit();
     private static String[][] arrray;
-    public String[][] array;
     static Dimension size = kit.getScreenSize();
-    public static void main(String[][] tabled,String names1,String teachName,String trim){
+    public static void main(String[][] tabled, String names1, String teachName, String trim){
+
         JFrame frame = new JFrame ("Legion");
         ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
@@ -33,13 +28,11 @@ public class leonid  {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-
             }
         });
         arrray = tabled;
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
-        JPanel panel = new JPanel();
         JMenu newMenu = new JMenu("Новый файл");
         fileMenu.add(newMenu);
         JMenuItem txtFileItem = new JMenuItem("Текстовый файл");
@@ -60,6 +53,7 @@ public class leonid  {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
+        JTable bookTable = new JTable(tabled,names);
         JPanel grid1 = new JPanel(new GridLayout(1, 2, 5, 0) );
         JButton jbt = new JButton("Сформировать отчет");
         JButton jbt1 = new JButton("Назад");
@@ -68,9 +62,9 @@ public class leonid  {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    finalCalc.predmet = names;
-                    finalCalc.table(tabled,names1,teachName,trim);
+                    finalCalc.label(tabled,names1,teachName,trim);
                     finalCalc.calc1(tabled,names1,teachName);
+                    finalCalc.label2(tabled,names1,teachName,trim,names);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
@@ -82,7 +76,7 @@ public class leonid  {
         flow.add(grid1);
         frame.getContentPane();
         frame.add(flow, BorderLayout.SOUTH);
-        JTable bookTable = new JTable(tabled,names);
+
         JScrollPane bookTableScrollPane = new JScrollPane(bookTable);
         bookTableScrollPane.setPreferredSize(new Dimension(1100,250));
 
@@ -95,7 +89,7 @@ public class leonid  {
             @Override
             public void windowClosing(WindowEvent e) {
                 try {
-                    save1.update_table(len.join(tabled));
+                    save1.update_table(tabled);
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }

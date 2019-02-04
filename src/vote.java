@@ -10,13 +10,9 @@ public class vote {
     Main vote=new Main();
     save save1 = new save();
     Main1 arr = new Main1();
-
-    public String name;
-
-
         public  void vale (String name) throws SQLException {
             vote.open();
-        ResultSet rs = vote.connection_Query("SELECT Классы FROM teach WHERE Имя = " + "'" + name +"'");
+            ResultSet rs = vote.connection_Query("SELECT Классы FROM teach WHERE Имя = " + "'" + name +"'");
         String classes = rs.getString("Классы");
         String [] words = classes.split(",");
         JFrame frame = new JFrame("Выбор класса");
@@ -27,20 +23,26 @@ public class vote {
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JMenu newMenu = new JMenu("Новый файл");
+            String[] items = {
+                    "1 триместр",
+                    "2 триместр",
+                    "3 триместр"
+            };
+            JComboBox comboBox1 = new JComboBox(items);
+            panel.add(comboBox1);
         fileMenu.add(newMenu);
             String finalName = name;
         JMenuItem txtFileItem = new JMenuItem("Текстовый файл");
         newMenu.add(txtFileItem);
         JMenuItem imgFileItem = new JMenuItem("Изображение");
         newMenu.add(imgFileItem);
-        String [][] tabledata;
-        tabledata = arr.transformArrayList(arr.getNames());
+        final String [][] tabledata = arr.transformArrayList(arr.getNames());
         JMenuItem openItem = new JMenuItem("Открыть");
         openItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    leonid.main(save1.read_teable(tabledata),null,finalName,null);
+                    leonid.main(save1.read_teable(tabledata),finalName,finalName,comboBox1.getSelectedItem().toString());
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
@@ -56,13 +58,7 @@ public class vote {
         Dimension dimension = toolkit.getScreenSize();
 
         panel.add(comboBox);
-        String[] items = {
-                    "1 триместр",
-                    "2 триместр",
-                    "3 триместр"
-            };
-            JComboBox comboBox1 = new JComboBox(items);
-        panel.add(comboBox1);
+
         JButton jbt = new JButton("Далее");
 
 

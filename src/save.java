@@ -15,7 +15,7 @@ public class save {
                 }
             }
         void update_table(String [] [] array) throws SQLException{
-            Integer args [] = new Integer[14];
+            int args [] = new int[14];
             for (int b = 0; b<array.length;b++){
                     if (array[b][1].equals("")){args[0] = 0;}else args[0] = Integer.parseInt(array[b][1]);
                     if (array[b][2].equals("")){args[1] = 0;}else args[1] = Integer.parseInt(array[b][2]);
@@ -31,7 +31,7 @@ public class save {
                     if (array[b][12].equals("")){args[11] = 0;}else args[11] = Integer.parseInt(array[b][12]);
                     if (array[b][13].equals("")){args[12] = 0;}else args[12] = Integer.parseInt(array[b][13]);
                     if (array[b][14].equals("")){args[13] = 0;}else args[13] = Integer.parseInt(array[b][14]);
-                query = "UPDATE '11А' SET Русскийязык = " + args[0] + ", Алгебра = " + args[1] + ", Геометрия = " + args[2] + ", Химия =" + args[3] + ", Физика = " + args[4] + ", Литература =" + args[5] + ", География  =" + args[6] + ", Искусство =" + args[7] + ", Физра = " + args[8] + ", Информатика =" + args[9] + ", English = " + args[10] + ", Обществознание = " + args[12] + ", История = " + args[13] + " WHERE ФИО ='" + array[b][0] +"'";
+                query = "UPDATE '11А' SET Русскийязык = " + args[0] + ", Алгебра = " + args[1] + ", Геометрия = " + args[2] + ", Химия =" + args[3] + ", Физика = " + args[4] + ", Литература =" + args[5] + ", География  =" + args[6] + ", Искусство =" + args[7] + ", Физра = " + args[8] + ", Информатика =" + args[9] + ", English = " + args[10] + ", Обществознание = " + args[11] + ", История = " + args[12] + " WHERE ФИО ='" + array[b][0] +"'";
                 int a = prog.connection_Update(query);
             }
         }
@@ -40,7 +40,7 @@ public class save {
             query = "SELECT * FROM" + "'"+"11А"+"'";
             ResultSet rs = prog.connection_Query(query);
             String FIO[] = new String[array.length];
-            String ocenki[] = new String[14];
+            String ocenki[] = new String[15];
             for (int i =0;rs.next();i++){
                 FIO[i] = rs.getString("ФИО");
                 ocenki[0] = rs.getString("Русскийязык");
@@ -69,7 +69,6 @@ public class save {
                 if (ocenki[10].equals("0"))ocenki[10] = "";
                 if (ocenki[11].equals("0"))ocenki[11] = "";
                 if (ocenki[12].equals("0"))ocenki[12] = "";
-                if (ocenki[13].equals("0"))ocenki[13] = "";
                 array[i][0] = FIO[i];
                 array[i][1] = ocenki[0];
                 array[i][2] = ocenki[1];
