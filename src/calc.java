@@ -11,17 +11,18 @@ import java.util.Arrays;
 
 class calc {
     Workbook wb = new HSSFWorkbook();
-    Sheet sh1 = wb.createSheet("Отчет");
+    Sheet sh1 = wb.createSheet("Статистика");
+    Sheet sh2=wb.createSheet("Кач-сок");
     FileOutputStream fos = new FileOutputStream("Отчет.xls");
     String[]FIO;
     public String predmet [];
     private int [][] main;
     calc() throws FileNotFoundException {
     }
-    void table (String[][] arr,String classNo,String teachName, String trim) throws IOException {
-        Row row =sh1.createRow(0);
+    void label (String[][] arr,String classNo,String teachName, String trim) throws IOException {
+        Row row = sh1.createRow(0);
         Cell cell = row.createCell(2);
-        cell.setCellValue("Рейтинг успеваемости учащихся " + classNo +" класса");
+        cell.setCellValue("Рейтинг успеваемости учащихся " + classNo + " класса");
 
         row = sh1.createRow(1);
         cell = row.createCell(4);
@@ -34,8 +35,13 @@ class calc {
         row = sh1.createRow(4);
         cell = row.createCell(8);
         cell.setCellValue("Классный руководитель: " + teachName);
-
-        {
+        wb.write(fos);
+        fos.close();
+    }
+        void table () throws IOException {
+            fos.getChannel();
+            Row row;
+            Cell cell;
             row = sh1.createRow(6);
             cell = row.createCell(0);
             cell.setCellValue("№ п/п\n");
@@ -68,11 +74,9 @@ class calc {
             cell.setCellValue("на 4 и 5\n");
             sh1.autoSizeColumn(1);
             sh1.autoSizeColumn(6);
-
             wb.write(fos);
             fos.close();
         }
-    }
     int [][] calc1(String[][] arr, String classNo,String teachName) throws IOException {
         main = new int[predmet.length][arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -187,13 +191,18 @@ class calc {
         return main;
     }
     void calc2 (){
+
         int [][] newMain = main;
-        Arrays.sort(newMain);
-        int [] col = new int[newMain.length];
+        Integer[] ocenki;
         for (int i = 0;i<newMain.length;i++){
-            if (newMain[i][1]==4)col[1]+=1;
-            if (newMain[i][2]==3)col[2]+=1;
-            if (newMain[i][3]==3)col[3]+=1;
+            ocenki = new Integer[]{0,0,0,0};
+            for (int b = 0; b<newMain[i].length;b++){
+                if (newMain[i][b]==5)ocenki[0]+=1;
+                if (newMain[i][b]==4)ocenki[1]+=1;
+                if (newMain[i][b]==3)ocenki[2]+=1;
+                if (newMain[i][b]==2)ocenki[3]+=1;
+            }
+        //есть массив по 1 предмету. Его надо записать
         }
     }
 }
