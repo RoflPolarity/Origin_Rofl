@@ -42,7 +42,7 @@ public class vote {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    leonid.main(save1.read_teable(tabledata),finalName,finalName,comboBox1.getSelectedItem().toString());
+                    leonid.main(save1.read_teable(tabledata),comboBox.getSelectedItem().toString(),finalName,comboBox1.getSelectedItem().toString());
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }

@@ -62,10 +62,11 @@ class leonid  {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    save1.update_table(tabled);
                     finalCalc.label(tabled,names1,teachName,trim);
                     finalCalc.calc1(tabled,names1,teachName);
                     finalCalc.label2(tabled,names1,teachName,trim,names);
-                } catch (IOException e1) {
+                } catch (IOException | SQLException e1) {
                     e1.printStackTrace();
                 }
             }
