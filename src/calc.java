@@ -195,8 +195,6 @@ class calc {
             return main;
         }
         void label2(String[][] arr, String classNo, String teachName, String trim,String predmet[]) throws IOException, SQLException {
-
-        fos = new FileOutputStream("Отчет.xls");
         main = new int[13][arr.length];
             String query = "SELECT * FROM '"+ classNo + "'";
             ResultSet rs = prog.connection_Query(query);
@@ -234,12 +232,13 @@ class calc {
             double average;
             predmet1 = new int[predmet.length][arr.length];
             for (int i = 0; i < main.length; i++) {
-
+                for (int b=0;b<main.length;b++){
+                    if (main[i][b]==5)predmet1[i][0]++;
+                    if (main[i][b]==4)predmet1[i][1]++;
+                    if (main[i][b]==3)predmet1[i][2]++;
+                    if (main[i][b]==2)predmet1[i][3]++;
+                }
                 fos = new FileOutputStream("Отчет.xls");
-                    if (main[i][i]==5)predmet1[i][0]++;
-                    if (main[i][i]==4)predmet1[i][1]++;
-                    if (main[i][i]==3)predmet1[i][2]++;
-                    if (main[i][i]==2)predmet1[i][3]++;
                 row = sh2.createRow(5);
                     cell = row.createCell(1);
                     cell.setCellValue(predmet[1]);
@@ -269,31 +268,29 @@ class calc {
                     cell.setCellValue(predmet[13]);
                     //13 предметов (12 в массиве)
                     row = sh2.createRow(6);
-                    cell = row.createCell(1);
+                    cell = row.createCell(1+i);
                     cell.setCellValue(predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]);
                     row = sh2.createRow(7);
-                    cell = row.createCell(1);
+                    cell = row.createCell(1+i);
                     cell.setCellValue(predmet1[i][0]);
                     row = sh2.createRow(8);
-                    cell = row.createCell(1);
+                    cell = row.createCell(1+i);
                     cell.setCellValue(predmet1[i][1]);
                     row = sh2.createRow(9);
-                    cell = row.createCell(1);
+                    cell = row.createCell(1+i);
                     cell.setCellValue(predmet1[i][2]);
                     row = sh2.createRow(10);
-                    cell = row.createCell(1);
+                    cell = row.createCell(1+i);
                     cell.setCellValue(predmet1[i][3]);
                     row = sh2.createRow(11);
-                    cell = row.createCell(1);
+                    cell = row.createCell(1+i);
                     cell.setCellValue(predmet1[i][3]);
                     average = this.findAverageWithoutUsingStream(main[i]);
                     row = sh2.createRow(12);
-                    cell = row.createCell(1);
+                    cell = row.createCell(1+i);
                     cell.setCellValue(average);
                     System.out.println(predmet1[i][0] + " " + predmet1[i][1] + " " + predmet1[i][2] + " " + predmet1[i][3]);
                     wb.write(fos);
-                    fos.close();
             }
-                fos.close();
             }
     }
