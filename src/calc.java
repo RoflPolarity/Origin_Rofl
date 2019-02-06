@@ -20,6 +20,7 @@ class calc {
     String[] FIO;
     private int predmet1[][];
     private int[][] main;
+    String formattedDouble;
 
     calc() throws FileNotFoundException {
     }
@@ -195,6 +196,7 @@ class calc {
             return main;
         }
         void label2(String[][] arr, String classNo, String teachName, String trim,String predmet[]) throws IOException, SQLException {
+
         main = new int[13][arr.length];
             String query = "SELECT * FROM '"+ classNo + "'";
             ResultSet rs = prog.connection_Query(query);
@@ -213,7 +215,8 @@ class calc {
                 main[11][i] = rs.getInt("Обществознание");
                 main[12][i] = rs.getInt("История");
             }
-        Row row = sh2.createRow(0);
+            FileOutputStream fos = new FileOutputStream("Отчет.xls");
+            Row row = sh2.createRow(0);
             Cell cell = row.createCell(2);
             cell.setCellValue("Рейтинг успеваемости учащихся " + classNo + " класса");
 
@@ -267,29 +270,71 @@ class calc {
                     cell = row.createCell(13);
                     cell.setCellValue(predmet[13]);
                     //13 предметов (12 в массиве)
+                    int q = 0;
                     row = sh2.createRow(6);
-                    cell = row.createCell(1+i);
-                    cell.setCellValue(predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]);
+                    for (int z = 1; q<main.length;z++){
+                    cell = row.createCell(z);
+                    cell.setCellValue(predmet1[q][0]+predmet1[q][1]+predmet1[q][2]+predmet1[q][3]);
+                    q++;
+                    }
+                    q = 0;
                     row = sh2.createRow(7);
-                    cell = row.createCell(1+i);
-                    cell.setCellValue(predmet1[i][0]);
+                    for (int z = 1;q<main.length;z++){
+                    cell = row.createCell(z);
+                    cell.setCellValue(predmet1[q][0]);
+                    q++;
+                    }
+                    q = 0;
                     row = sh2.createRow(8);
-                    cell = row.createCell(1+i);
-                    cell.setCellValue(predmet1[i][1]);
+                    for (int z = 1;q<main.length;z++) {
+                        cell = row.createCell(z);
+                        cell.setCellValue(predmet1[q][1]);
+                    q++;
+                    }
+                    q = 0;
                     row = sh2.createRow(9);
-                    cell = row.createCell(1+i);
-                    cell.setCellValue(predmet1[i][2]);
+                    for (int z = 1;q<main.length;z++) {
+                    cell = row.createCell(z);
+                    cell.setCellValue(predmet1[q][2]);
+                    q++;
+                    }
+                    q = 0;
                     row = sh2.createRow(10);
-                    cell = row.createCell(1+i);
-                    cell.setCellValue(predmet1[i][3]);
+                    for (int z = 1;q<main.length;z++){
+                    cell = row.createCell(z);
+                    cell.setCellValue(predmet1[q][3]);
+                    q++;
+                    }
+                    q = 0;
                     row = sh2.createRow(11);
-                    cell = row.createCell(1+i);
-                    cell.setCellValue(predmet1[i][3]);
-                    average = this.findAverageWithoutUsingStream(main[i]);
+                    for (int z = 1;q<main.length;z++) {
+                        cell = row.createCell(z);
+                        cell.setCellValue(predmet1[q][3]);
+                    q++;
+                    }
+
                     row = sh2.createRow(12);
-                    cell = row.createCell(1+i);
-                    cell.setCellValue(average);
-                    System.out.println(predmet1[i][0] + " " + predmet1[i][1] + " " + predmet1[i][2] + " " + predmet1[i][3]);
+                    q = 0;
+                    for (int z = 1;q<main.length;z++) {
+
+                        average = this.findAverageWithoutUsingStream(main[q]);
+                        formattedDouble = String.format("%.2f", average);
+                        cell = row.createCell(z);
+                        cell.setCellValue(formattedDouble);
+                        q++;
+                    }
+                    row = sh2.createRow(13);
+                    q = 0;
+                    float present;
+                    for (int z =1;q<main.length;z++){
+                    cell = row.createCell(z);
+                    present = ((predmet1[q][0]+predmet1[q][1])*100)/(predmet1[q][0]+predmet1[q][1]+predmet1[q][2]+predmet1[q][3]);
+                    cell.setCellValue(present);
+                    q++;
+                }
+                    //System.out.println(predmet1[i][0] + " " + predmet1[i][1] + " " + predmet1[i][2] + " " + predmet1[i][3]);
+                    sh2.autoSizeColumn(1);sh2.autoSizeColumn(3);sh2.autoSizeColumn(6);sh2.autoSizeColumn(7);sh2.autoSizeColumn(9);sh2.autoSizeColumn(10);sh2.autoSizeColumn(11);sh2.autoSizeColumn(12);
+
                     wb.write(fos);
             }
             }
