@@ -49,6 +49,9 @@ public class vote {
             }
         });
         fileMenu.add(openItem);
+        JMenuItem helpFileItem = new JMenuItem("Помощь");
+        fileMenu.add(helpFileItem);
+
         fileMenu.addSeparator();
         JMenuItem closeItem = new JMenuItem("Выйти");
         fileMenu.add(closeItem);
