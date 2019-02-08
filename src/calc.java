@@ -3,25 +3,22 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Arrays;
 
 
 class calc {
-    Main prog = new Main();
-    Workbook wb = new HSSFWorkbook();
-    Sheet sh1 = wb.createSheet("Статистика");
-    Sheet sh2 = wb.createSheet("Кач-сок");
-    FileOutputStream fos = new FileOutputStream("Отчет.xls");
-    String[] FIO;
-    private int predmet1[][];
+    private Main prog = new Main();
+    private Workbook wb = new HSSFWorkbook();
+    private Sheet sh1 = wb.createSheet("Статистика");
+    private Sheet sh2 = wb.createSheet("Кач-сок");
+    private FileOutputStream fos = new FileOutputStream("Отчет.xls");
     private int[][] main;
-    String formattedDouble;
-
     calc() throws FileNotFoundException {
     }
     public  int findSumWithoutUsingStream(int[] array) {
@@ -59,19 +56,19 @@ class calc {
             row.setHeightInPoints(35);
             cell.setCellValue("ФИО учащегося");
             cell = row.createCell(2);
-            cell.setCellValue("кол-во \n троек");
+            cell.setCellValue("кол-во троек");
             cell = row.createCell(3);
-            cell.setCellValue("кол-во \n четверок");
+            cell.setCellValue("кол-во четверок");
             cell = row.createCell(4);
-            cell.setCellValue("кол-во \n пятерок");
+            cell.setCellValue("кол-во пятерок");
             cell = row.createCell(5);
-            cell.setCellValue("кол-во \n двоек");
+            cell.setCellValue("кол-во двоек");
             cell = row.createCell(6);
-            cell.setCellValue("с одной \n \"2\" и более");
+            cell.setCellValue("с одной \"2\" и более");
             cell = row.createCell(7);
-            cell.setCellValue("с одной \n \"3\"");
+            cell.setCellValue("с одной \"3\"");
             cell = row.createCell(8);
-            cell.setCellValue("с одной \n \"4\"");
+            cell.setCellValue("с одной \"4\"");
             cell = row.createCell(9);
             cell.setCellValue("на \"4\" и \"5\"\n");
             cell = row.createCell(10);
@@ -91,7 +88,7 @@ class calc {
         int[][] calc1 (String[][]arr, String classNo, String teachName) throws IOException {
             main = new int[13][arr.length];
         for (int i = 0; i < arr.length; i++) {
-                FIO = arr[i][0].split(" ");
+            String[] FIO = arr[i][0].split(" ");
                 Integer[] ocenki = new Integer[]{0, 0, 0, 0};
                 if (arr[i][1].equals("2")) ocenki[0] = ocenki[0] + 1;
                 if (arr[i][1].equals("3")) ocenki[1] = ocenki[1] + 1;
@@ -189,13 +186,16 @@ class calc {
                 else cell.setCellValue("-");
                 sh1.autoSizeColumn(9);
                 sh1.autoSizeColumn(1);
+                sh1.autoSizeColumn(5);
+                sh1.autoSizeColumn(3);
+                sh1.autoSizeColumn(7);
                 wb.write(fos);
                 fos.close();
             }
             fos.close();
             return main;
         }
-        void label2(String[][] arr, String classNo, String teachName, String trim,String predmet[]) throws IOException, SQLException {
+        void label2(String[][] arr , String classNo, String teachName, String trim,String predmet[]) throws IOException, SQLException {
 
         main = new int[13][arr.length];
             String query = "SELECT * FROM '"+ classNo + "'";
@@ -233,16 +233,18 @@ class calc {
             cell.setCellValue("Классный руководитель: " + teachName);
             wb.write(fos);
             double average;
-            predmet1 = new int[predmet.length][arr.length];
+            int[][] predmet1 = new int[predmet.length][4];
             for (int i = 0; i < main.length; i++) {
                 for (int b=0;b<main.length;b++){
-                    if (main[i][b]==5)predmet1[i][0]++;
-                    if (main[i][b]==4)predmet1[i][1]++;
-                    if (main[i][b]==3)predmet1[i][2]++;
-                    if (main[i][b]==2)predmet1[i][3]++;
+                    if (main[i][b]==5) predmet1[i][0]++;
+                    if (main[i][b]==4) predmet1[i][1]++;
+                    if (main[i][b]==3) predmet1[i][2]++;
+                    if (main[i][b]==2) predmet1[i][3]++;
                 }
                 fos = new FileOutputStream("Отчет.xls");
                 row = sh2.createRow(5);
+                    cell = row.createCell(0);
+                    cell.setCellValue("Предметы");
                     cell = row.createCell(1);
                     cell.setCellValue(predmet[1]);
                     cell = row.createCell(2);
@@ -272,13 +274,17 @@ class calc {
                     //13 предметов (12 в массиве)
                     int q = 0;
                     row = sh2.createRow(6);
+                    cell = row.createCell(0);
+                    cell.setCellValue("Всего отметок");
                     for (int z = 1; q<main.length;z++){
                     cell = row.createCell(z);
-                    cell.setCellValue(predmet1[q][0]+predmet1[q][1]+predmet1[q][2]+predmet1[q][3]);
+                    cell.setCellValue(predmet1[q][0]+ predmet1[q][1]+ predmet1[q][2]+ predmet1[q][3]);
                     q++;
                     }
                     q = 0;
                     row = sh2.createRow(7);
+                    cell = row.createCell(0);
+                    cell.setCellValue("Кол-во \"5\"");
                     for (int z = 1;q<main.length;z++){
                     cell = row.createCell(z);
                     cell.setCellValue(predmet1[q][0]);
@@ -286,6 +292,8 @@ class calc {
                     }
                     q = 0;
                     row = sh2.createRow(8);
+                    cell = row.createCell(0);
+                    cell.setCellValue("Кол-во \"4\"");
                     for (int z = 1;q<main.length;z++) {
                         cell = row.createCell(z);
                         cell.setCellValue(predmet1[q][1]);
@@ -293,6 +301,8 @@ class calc {
                     }
                     q = 0;
                     row = sh2.createRow(9);
+                    cell = row.createCell(0);
+                    cell.setCellValue("Кол-во \"3\"");
                     for (int z = 1;q<main.length;z++) {
                     cell = row.createCell(z);
                     cell.setCellValue(predmet1[q][2]);
@@ -300,6 +310,8 @@ class calc {
                     }
                     q = 0;
                     row = sh2.createRow(10);
+                    cell = row.createCell(0);
+                    cell.setCellValue("Кол-во \"2\"");
                     for (int z = 1;q<main.length;z++){
                     cell = row.createCell(z);
                     cell.setCellValue(predmet1[q][3]);
@@ -307,6 +319,8 @@ class calc {
                     }
                     q = 0;
                     row = sh2.createRow(11);
+                    cell = row.createCell(0);
+                    cell.setCellValue("Не аттестованы");
                     for (int z = 1;q<main.length;z++) {
                         cell = row.createCell(z);
                         cell.setCellValue(predmet1[q][3]);
@@ -314,28 +328,40 @@ class calc {
                     }
 
                     row = sh2.createRow(12);
+                    cell = row.createCell(0);
+                    cell.setCellValue("Средний \n балл");
                     q = 0;
                     for (int z = 1;q<main.length;z++) {
 
                         average = this.findAverageWithoutUsingStream(main[q]);
-                        formattedDouble = String.format("%.2f", average);
+                        String formattedDouble = String.format("%.2f", average);
                         cell = row.createCell(z);
                         cell.setCellValue(formattedDouble);
                         q++;
                     }
-                    row = sh2.createRow(13);
                     q = 0;
+                    row = sh2.createRow(13);
+                    cell = row.createCell(0);
+                    cell.setCellValue("% качества");
                     float present;
                     for (int z =1;q<main.length;z++){
-                    cell = row.createCell(z);
-                    present = ((predmet1[q][0]+predmet1[q][1])*100)/(predmet1[q][0]+predmet1[q][1]+predmet1[q][2]+predmet1[q][3]);
-                    cell.setCellValue(present);
+                        cell = row.createCell(z);
+                        //System.out.println((predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]));
+                    present = ((predmet1[q][0]+predmet1[q][1])*100)/(predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]);
+                    cell.setCellValue(present+"%");
                     q++;
                 }
                     //System.out.println(predmet1[i][0] + " " + predmet1[i][1] + " " + predmet1[i][2] + " " + predmet1[i][3]);
                     sh2.autoSizeColumn(1);sh2.autoSizeColumn(3);sh2.autoSizeColumn(6);sh2.autoSizeColumn(7);sh2.autoSizeColumn(9);sh2.autoSizeColumn(10);sh2.autoSizeColumn(11);sh2.autoSizeColumn(12);
-
+                    sh2.autoSizeColumn(0);
                     wb.write(fos);
             }
             }
+
+
+    void finalcalc (String[][] arr ,String classNo, String teachName,String trim,String names[]) throws IOException, SQLException {
+        label(arr,classNo,teachName,trim);
+        calc1(arr,classNo,teachName);
+        label2(arr, classNo,teachName,trim, names);
     }
+}

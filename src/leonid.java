@@ -4,15 +4,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 class leonid  {
+
     static Toolkit kit = Toolkit.getDefaultToolkit();
     private static String[][] arrray;
     static Dimension size = kit.getScreenSize();
     public static void main(String[][] tabled, String names1, String teachName, String trim){
-
+        File och = new File("Отчет.xls");
+        vote vale = new vote();
+        boolean exists = och.exists();
         JFrame frame = new JFrame ("Legion");
         ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
@@ -24,12 +28,6 @@ class leonid  {
             e.printStackTrace();
         }
         save save1 = new save();
-        Timer timer1 = new Timer(10000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-            }
-        });
         arrray = tabled;
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
@@ -63,10 +61,22 @@ class leonid  {
             public void actionPerformed(ActionEvent e) {
                 try {
                     save1.update_table(tabled);
-                    finalCalc.label(tabled,names1,teachName,trim);
-                    finalCalc.calc1(tabled,names1,teachName);
-                    finalCalc.label2(tabled,names1,teachName,trim,names);
+                    finalCalc.finalcalc(tabled,names1,teachName,trim,names);
+                    if(exists){
+                        jbt.setBackground(Color.green);
+                    }else och.createNewFile();
                 } catch (IOException | SQLException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
+        jbt1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    frame.setVisible(false);
+                    vale.vale(names1);
+                } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
             }
@@ -118,6 +128,13 @@ class leonid  {
 
             @Override
             public void windowDeactivated(WindowEvent e) {
+
+            }
+        });
+        Timer timer1 = new Timer(10000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
 
             }
         });
