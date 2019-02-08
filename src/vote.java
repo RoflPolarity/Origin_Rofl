@@ -4,13 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import java.util.ArrayList;
 public class vote {
-    Main vote=new Main();
-    save save1 = new save();
-    Main1 arr = new Main1();
-        public  void vale (String name) throws SQLException {
+    private Main vote=new Main();
+    private save save1 = new save();
+    private Main1 arr = new Main1();
+        void vale(String name) throws SQLException {
             vote.open();
             ResultSet rs = vote.connection_Query("SELECT Классы FROM teach WHERE Имя = " + "'" + name +"'");
         String classes = rs.getString("Классы");
