@@ -47,8 +47,6 @@ public class vote {
         fileMenu.add(helpFileItem);
 
         fileMenu.addSeparator();
-        JMenuItem closeItem = new JMenuItem("Выйти");
-        fileMenu.add(closeItem);
         JMenuItem closeAllItem = new JMenuItem("Помощь");
             String finalName1 = name;
             closeAllItem.addActionListener(new ActionListener() {
