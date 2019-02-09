@@ -347,7 +347,7 @@ class calc {
                     for (int z =1;q<main.length;z++){
                         cell = row.createCell(z);
                         //System.out.println((predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]));
-                    present = ((predmet1[q][0]+predmet1[q][1])*100)/(predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]);
+                    present = (predmet1[q][0]+predmet1[q][1])*100/(predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]);
                     cell.setCellValue(present+"%");
                     q++;
                 }
