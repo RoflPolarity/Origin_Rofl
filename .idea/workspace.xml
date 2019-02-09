@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5802829-06f7-4b7d-8142-aca6f1077c64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/help.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/users.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/legion/leonid$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/leonid$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/legion/leonid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/leonid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/help.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vote.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,8 +19,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Origin_Rofl$leonid.ic" NAME="leonid Coverage Results" MODIFIED="1547393339484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Origin_Rofl$Main.ic" NAME="Main Coverage Results" MODIFIED="1549385645955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Origin_Rofl$leonid.ic" NAME="leonid Coverage Results" MODIFIED="1547393339484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -45,34 +41,91 @@
     </expand>
     <select />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="854149348">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="419" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="419" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI_1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="79" />
+            <state relative-caret-position="663">
+              <caret line="47" column="66" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/calc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1763">
+              <caret line="348" column="31" lean-forward="true" selection-start-line="348" selection-start-column="31" selection-end-line="348" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#calc#0;class#calc#0" />
+                <element signature="method#findSumWithoutUsingStream#0;class#calc#0" />
+                <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
+                <element signature="method#label#0;class#calc#0" />
+                <element signature="method#calc1#0;class#calc#0" />
+                <element signature="method#finalcalc#0;class#calc#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/vote.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/help.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -95,7 +148,6 @@
       <find>predmet1</find>
       <find>names</find>
       <find>exists</find>
-      <find>name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -113,11 +165,18 @@
         <option value="$PROJECT_DIR$/src/Main1.java" />
         <option value="$PROJECT_DIR$/src/save.java" />
         <option value="$PROJECT_DIR$/src/leonid.java" />
+        <option value="$PROJECT_DIR$/src/print.java" />
         <option value="$PROJECT_DIR$/src/calc.java" />
-        <option value="$PROJECT_DIR$/src/help.java" />
         <option value="$PROJECT_DIR$/src/vote.java" />
+        <option value="$PROJECT_DIR$/src/help.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -126,9 +185,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -138,7 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -166,6 +224,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,7 +237,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549699333413" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549654244365" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -190,6 +249,118 @@
       <recent name="C:\Users\Immor\Documents\GitHub\Origin_Rofl" />
       <recent name="C:\Users\Immor\Documents\GitHub\Origin_Rofl\src" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/legion/vote.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/vote.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/help.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -297,7 +468,8 @@
       <workItem from="1549366641296" duration="16722000" />
       <workItem from="1549399371630" duration="993000" />
       <workItem from="1549482204069" duration="5393000" />
-      <workItem from="1549611053121" duration="9750000" />
+      <workItem from="1549611053121" duration="6344000" />
+      <workItem from="1549648947910" duration="4515000" />
     </task>
     <task id="LOCAL-00001" summary="Казахи сосут">
       <created>1547400553808</created>
@@ -545,23 +717,23 @@
       <updated>1549400351500</updated>
     </task>
     <task id="LOCAL-00036" summary="Table">
-      <created>1549648615785</created>
+      <created>1549650911766</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1549648615785</updated>
+      <updated>1549650911766</updated>
     </task>
     <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160037000" />
+    <option name="totallyTimeSpent" value="161146000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873096" visible="true" weight="0.13388805" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49873096" visible="true" weight="0.13539445" />
       <window_info id="Structure" order="1" sideWeight="0.50126904" side_tool="true" weight="0.20415778" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -570,7 +742,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.1816694" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.18087319" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3747954" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -579,7 +751,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.3253638" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32569557" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32744282" />
       <window_info anchor="bottom" id="Database Changes" order="12" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32952183" />
       <window_info anchor="bottom" id="Duplicate detector" order="14" weight="0.3289689" />
@@ -631,6 +803,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Казахи сосатб" />
@@ -792,13 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/IntPredicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -817,9 +985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#815#816#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,46 +997,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/leonid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="133" column="31" lean-forward="true" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/calc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="341" column="26" lean-forward="true" selection-start-line="341" selection-start-column="26" selection-end-line="341" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#calc#0;class#calc#0" />
-            <element signature="method#findSumWithoutUsingStream#0;class#calc#0" />
-            <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
-            <element signature="method#label#0;class#calc#0" />
-            <element signature="method#calc1#0;class#calc#0" />
-            <element signature="method#finalcalc#0;class#calc#0" />
-            <marker date="1549691638738" expanded="true" signature="16463:16879" ph="..." />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI_1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="79" />
+        <state relative-caret-position="663">
+          <caret line="47" column="66" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/swing/JMenuItem.java">
+    <entry file="file://$PROJECT_DIR$/src/print.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/help.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="425">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -880,8 +1021,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="170">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/calc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1763">
+          <caret line="348" column="31" lean-forward="true" selection-start-line="348" selection-start-column="31" selection-end-line="348" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#calc#0;class#calc#0" />
+            <element signature="method#findSumWithoutUsingStream#0;class#calc#0" />
+            <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
+            <element signature="method#label#0;class#calc#0" />
+            <element signature="method#calc1#0;class#calc#0" />
+            <element signature="method#finalcalc#0;class#calc#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/help.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
