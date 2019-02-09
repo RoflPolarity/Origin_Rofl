@@ -10,6 +10,7 @@ public class vote {
     private Main1 arr = new Main1();
         void vale(String name) throws SQLException {
             vote.open();
+            help help1 = new help();
             ResultSet rs = vote.connection_Query("SELECT Классы FROM teach WHERE Имя = " + "'" + name +"'");
         String classes = rs.getString("Классы");
         String [] words = classes.split(",");
@@ -20,20 +21,15 @@ public class vote {
         JComboBox comboBox = new JComboBox(words);
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
-        JMenu newMenu = new JMenu("Новый файл");
             String[] items = {
                     "1 триместр",
                     "2 триместр",
-                    "3 триместр"
+                    "3 триместр",
+                    "Годовая"
             };
             JComboBox comboBox1 = new JComboBox(items);
             panel.add(comboBox1);
-        fileMenu.add(newMenu);
             String finalName = name;
-        JMenuItem txtFileItem = new JMenuItem("Текстовый файл");
-        newMenu.add(txtFileItem);
-        JMenuItem imgFileItem = new JMenuItem("Изображение");
-        newMenu.add(imgFileItem);
         final String [][] tabledata = arr.transformArrayList(arr.getNames());
         JMenuItem openItem = new JMenuItem("Открыть");
         openItem.addActionListener(new ActionListener() {
@@ -53,7 +49,15 @@ public class vote {
         fileMenu.addSeparator();
         JMenuItem closeItem = new JMenuItem("Выйти");
         fileMenu.add(closeItem);
-        JMenuItem closeAllItem = new JMenuItem("Сохранить и выйти");
+        JMenuItem closeAllItem = new JMenuItem("Помощь");
+            String finalName1 = name;
+            closeAllItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                help1.help(finalName1);
+            }
+        });
         fileMenu.add(closeAllItem);
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
