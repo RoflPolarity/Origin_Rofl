@@ -1,9 +1,11 @@
+import javax.swing.*;
+import java.awt.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-public class save {
+public class save{
     Main prog = new Main();
     private String query;
-
+    leonid len = new leonid();
         void save_table (String [] [] array) throws SQLException {
             query = "create table if not exists '11А'(id INTEGER PRIMARY KEY AUTOINCREMENT, ФИО TEXT , Русскийязык INTEGER,Алгебра INTEGER,Геометрия INTEGER,Химия INTEGER,Физика INTEGER, Литература INTEGER,География INTEGER, Искусство INTEGER,Физра INTEGER,Информатика INTEGER,English INTEGER ,Обществознание INTEGER ,История INTEGER )";
             Boolean check = prog.connection_execute(query);
@@ -14,8 +16,9 @@ public class save {
                 prog.connection_execute(query);
                 }
             }
-        void update_table(String [] [] array) throws SQLException{
+        void update_table(String [] [] array) throws SQLException {
             int args [] = new int[14];
+            try {
             for (int b = 0; b<array.length;b++){
                     if (array[b][1].equals("")){args[0] = 0;}else args[0] = Integer.parseInt(array[b][1]);
                     if (array[b][2].equals("")){args[1] = 0;}else args[1] = Integer.parseInt(array[b][2]);
@@ -33,6 +36,9 @@ public class save {
                     if (array[b][14].equals("")){args[13] = 0;}else args[13] = Integer.parseInt(array[b][14]);
                 query = "UPDATE '11А' SET Русскийязык = " + args[0] + ", Алгебра = " + args[1] + ", Геометрия = " + args[2] + ", Химия =" + args[3] + ", Физика = " + args[4] + ", Литература =" + args[5] + ", География  =" + args[6] + ", Искусство =" + args[7] + ", Физра = " + args[8] + ", Информатика =" + args[9] + ", English = " + args[10] + ", Обществознание = " + args[11] + ", История = " + args[12] + " WHERE ФИО ='" + array[b][0] +"'";
                 int a = prog.connection_Update(query);
+            }
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(len,"В таблице обнаружены не верные значения","Ошибка",JOptionPane.ERROR_MESSAGE);
             }
         }
         String [][] read_teable (String[][] array)throws SQLException {

@@ -17,7 +17,7 @@ class calc {
     private Workbook wb = new HSSFWorkbook();
     private Sheet sh1 = wb.createSheet("Статистика");
     private Sheet sh2 = wb.createSheet("Кач-сок");
-    private FileOutputStream fos = new FileOutputStream("Отчет.xls");
+    private FileOutputStream fos;
     private int[][] main;
     calc() throws FileNotFoundException {
     }
@@ -33,6 +33,7 @@ class calc {
         return (double) sum / array.length;
     }
     void label(String[][] arr, String classNo, String teachName, String trim) throws IOException {
+        fos = new FileOutputStream("Отчет.xls");
         Row row = sh1.createRow(0);
         Cell cell = row.createCell(2);
         cell.setCellValue("Рейтинг успеваемости учащихся " + classNo + " класса");
@@ -341,6 +342,7 @@ class calc {
                     }
                     q = 0;
                     row = sh2.createRow(13);
+                    row.setHeightInPoints(35);
                     cell = row.createCell(0);
                     cell.setCellValue("% качества");
                     double present; String formatedPersent;
@@ -361,6 +363,7 @@ class calc {
                     sh2.autoSizeColumn(0);
                     wb.write(fos);
             }
+            fos.close();
             }
 
 

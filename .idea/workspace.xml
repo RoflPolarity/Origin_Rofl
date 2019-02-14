@@ -7,13 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5802829-06f7-4b7d-8142-aca6f1077c64" name="Default Changelist" comment="Table">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/users.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/legion/BookTableModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/BookTableModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/legion/vote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/vote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/legion/leonid$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/leonid$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/legion/leonid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/leonid.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/leonid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leonid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/save.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vote.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,8 +25,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Origin_Rofl$leonid.ic" NAME="leonid Coverage Results" MODIFIED="1547393339484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Origin_Rofl$Main.ic" NAME="Main Coverage Results" MODIFIED="1549385645955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Origin_Rofl$leonid.ic" NAME="leonid Coverage Results" MODIFIED="1547393339484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -46,32 +47,86 @@
     </expand>
     <select />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="854149348">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="941" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="941" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/calc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
+            <state relative-caret-position="247">
+              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#calc#0;class#calc#0" />
                 <element signature="method#findSumWithoutUsingStream#0;class#calc#0" />
                 <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
-                <element signature="method#label#0;class#calc#0" />
                 <element signature="method#calc1#0;class#calc#0" />
-                <element signature="method#label2#0;class#calc#0" />
-                <element signature="method#finalcalc#0;class#calc#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/leonid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="147" column="39" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
+            <state relative-caret-position="459">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/vote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1428">
+              <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/save.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+              <folding>
+                <element signature="method#save_table#0;class#save#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,6 +151,8 @@
       <find>exists</find>
       <find>average</find>
       <find>bookTable</find>
+      <find>label</find>
+      <find>grid1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -111,14 +168,20 @@
         <option value="$PROJECT_DIR$/.idea/artifacts/legion_jar.xml" />
         <option value="$PROJECT_DIR$/src/print.java" />
         <option value="$PROJECT_DIR$/src/help.java" />
-        <option value="$PROJECT_DIR$/src/save.java" />
         <option value="$PROJECT_DIR$/src/BookTableModel.java" />
         <option value="$PROJECT_DIR$/src/Main1.java" />
-        <option value="$PROJECT_DIR$/src/vote.java" />
         <option value="$PROJECT_DIR$/src/calc.java" />
+        <option value="$PROJECT_DIR$/src/save.java" />
         <option value="$PROJECT_DIR$/src/leonid.java" />
+        <option value="$PROJECT_DIR$/src/vote.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -126,11 +189,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="620" />
-    <option name="y" value="-8" />
-    <option name="width" value="604" />
-    <option name="height" value="735" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="860" />
+    <option name="y" value="30" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -140,18 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Origin_Rofl" type="58d84e3e:PackageViewProjectNode" />
-              <item name="legion" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,6 +214,18 @@
               <item name="Origin_Rofl" type="b2602c69:ProjectViewProjectNode" />
               <item name="Origin_Rofl" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Origin_Rofl" type="58d84e3e:PackageViewProjectNode" />
+              <item name="legion" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -180,7 +243,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549654244365" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550173883435" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -303,6 +366,9 @@
       <workItem from="1549648947910" duration="4515000" />
       <workItem from="1549699517974" duration="3870000" />
       <workItem from="1549953249360" duration="4407000" />
+      <workItem from="1550165569395" duration="473000" />
+      <workItem from="1550166086240" duration="7000" />
+      <workItem from="1550166127309" duration="7524000" />
     </task>
     <task id="LOCAL-00001" summary="Казахи сосут">
       <created>1547400553808</created>
@@ -574,13 +640,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169423000" />
+    <option name="totallyTimeSpent" value="177427000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873096" visible="true" weight="0.13918306" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873096" visible="true" weight="0.14712153" />
       <window_info id="Structure" order="1" sideWeight="0.50126904" side_tool="true" weight="0.20415778" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -589,7 +655,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.18003273" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.17983368" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3747954" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -650,6 +716,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Казахи сосатб" />
@@ -839,16 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BookTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -877,37 +936,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/calc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#calc#0;class#calc#0" />
+            <element signature="method#findSumWithoutUsingStream#0;class#calc#0" />
+            <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
+            <element signature="method#calc1#0;class#calc#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/save.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        <state relative-caret-position="459">
+          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
           <folding>
             <element signature="method#save_table#0;class#save#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/calc.java">
+    <entry file="file://$PROJECT_DIR$/src/leonid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#calc#0;class#calc#0" />
-            <element signature="method#findSumWithoutUsingStream#0;class#calc#0" />
-            <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
-            <element signature="method#label#0;class#calc#0" />
-            <element signature="method#calc1#0;class#calc#0" />
-            <element signature="method#label2#0;class#calc#0" />
-            <element signature="method#finalcalc#0;class#calc#0" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/leonid.java">
+    <entry file="file://$PROJECT_DIR$/src/vote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="147" column="39" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
+        <state relative-caret-position="1428">
+          <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

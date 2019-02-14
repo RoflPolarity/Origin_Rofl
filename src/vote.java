@@ -17,7 +17,7 @@ public class vote {
         JFrame frame = new JFrame("Выбор класса");
         ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
-        JPanel panel = new JPanel();
+            JPanel panel = new JPanel();
         JComboBox comboBox = new JComboBox(words);
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
@@ -32,6 +32,13 @@ public class vote {
             String finalName = name;
         final String [][] tabledata = arr.transformArrayList(arr.getNames());
         JMenuItem openItem = new JMenuItem("Открыть");
+        JMenuItem addItem = new JMenuItem("Добавить класс");
+        addItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            //Добавить действие на кнопку
+            }
+        });
         openItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -8,21 +8,16 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
-class leonid  {
-
-    static Toolkit kit = Toolkit.getDefaultToolkit();
+class leonid extends Component {
     private static String[][] arrray;
-    static Dimension size = kit.getScreenSize();
     public static void main(String[][] tabled, String names1, String teachName, String trim){
         File och = new File("Отчет.xls");
         JLabel lable = new JLabel();
         lable.setVisible(false);
         vote vale = new vote();
-        boolean exists = och.exists();
         JFrame frame = new JFrame ("Legion");
         ImageIcon icon = new ImageIcon("legion2.png");
         frame.setIconImage(icon.getImage());
-         leonid len = new leonid();
         calc calc1 = null;
         try {
             calc1 = new calc();
@@ -54,25 +49,22 @@ class leonid  {
         frame.setLocationRelativeTo(null);
         String names [] = {"ФИО","Русский язык","Алгебра","Геометрия","Химия","Физика","Литература","География","Искусство","Физ.Культура","Информатика","Англ.Язык","Обществознание","История"};
         JTable bookTable = new JTable(tabled,names);
-        JPanel grid1 = new JPanel(new GridLayout(1, 2, 5, 0) );
+        JPanel grid1 = new JPanel(new GridLayout(2, 2, 5, 0) );
         JButton jbt = new JButton("Сформировать отчет");
         JButton jbt1 = new JButton("Назад");
         calc finalCalc = calc1;
-
+        lable.setBackground(Color.gray);
         jbt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 lable.setVisible(true);
+                lable.setText("Формирование отчета...");
                 try {
                     save1.update_table(tabled);
                     finalCalc.finalcalc(tabled,names1,teachName,trim,names);
-
-                    if(exists){
-                        jbt.setBackground(Color.green);
-                        lable.setText("Отчет успешно сформирован");
-                    }else och.createNewFile();
+                    lable.setText("Отчет успешно сформирован");
                 } catch (IOException | SQLException e1) {
-                    e1.printStackTrace();
+                    System.out.println(e1.getMessage());
                 }
             }
         });
@@ -90,6 +82,7 @@ class leonid  {
 
         grid1.add (jbt1);
         grid1.add (jbt);
+        grid1.add(lable);
         JPanel flow = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         flow.add(grid1);
         frame.getContentPane();
@@ -145,7 +138,6 @@ class leonid  {
 
             }
         });
-        bookTableScrollPane.add(lable);
         frame.setVisible(true);
         timer1.start();
         frame.add(bookTableScrollPane);
@@ -154,8 +146,5 @@ class leonid  {
         frame.pack();
         frame.revalidate();
     }
-
-    String [] [] join (String[][] array){
-      return array;
-    }
 }
+
