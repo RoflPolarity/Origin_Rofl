@@ -5,7 +5,7 @@ public class BookTableModel extends AbstractTableModel {
     Main1 setName = new Main1();
     @Override
     public int getRowCount() {
-        sel.open();
+
         return sel.select_people().size();
     }
 

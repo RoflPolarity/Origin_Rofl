@@ -6,8 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5802829-06f7-4b7d-8142-aca6f1077c64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/help.java" afterDir="false" />
+    <list default="true" id="c5802829-06f7-4b7d-8142-aca6f1077c64" name="Default Changelist" comment="Table">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/users.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/users.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/legion/BookTableModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/BookTableModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/legion/vote.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/legion/vote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BookTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leonid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leonid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vote.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -43,31 +49,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vote.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI_1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="47" column="66" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/calc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2832">
-              <caret line="348" column="31" selection-start-line="348" selection-start-column="31" selection-end-line="348" selection-end-column="31" />
+            <state relative-caret-position="309">
+              <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#calc#0;class#calc#0" />
@@ -75,26 +60,18 @@
                 <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
                 <element signature="method#label#0;class#calc#0" />
                 <element signature="method#calc1#0;class#calc#0" />
+                <element signature="method#label2#0;class#calc#0" />
                 <element signature="method#finalcalc#0;class#calc#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/help.java">
+        <entry file="file://$PROJECT_DIR$/src/leonid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="245">
+              <caret line="147" column="39" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -117,6 +94,8 @@
       <find>predmet1</find>
       <find>names</find>
       <find>exists</find>
+      <find>average</find>
+      <find>bookTable</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,18 +105,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Row.java" />
-        <option value="$PROJECT_DIR$/src/BookTableModel.java" />
         <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/GUI_1.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/.idea/artifacts/legion_jar.xml" />
-        <option value="$PROJECT_DIR$/src/Main1.java" />
-        <option value="$PROJECT_DIR$/src/save.java" />
-        <option value="$PROJECT_DIR$/src/leonid.java" />
         <option value="$PROJECT_DIR$/src/print.java" />
-        <option value="$PROJECT_DIR$/src/calc.java" />
-        <option value="$PROJECT_DIR$/src/vote.java" />
         <option value="$PROJECT_DIR$/src/help.java" />
+        <option value="$PROJECT_DIR$/src/save.java" />
+        <option value="$PROJECT_DIR$/src/BookTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Main1.java" />
+        <option value="$PROJECT_DIR$/src/vote.java" />
+        <option value="$PROJECT_DIR$/src/calc.java" />
+        <option value="$PROJECT_DIR$/src/leonid.java" />
       </list>
     </option>
   </component>
@@ -148,7 +127,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="620" />
     <option name="y" value="-8" />
     <option name="width" value="604" />
     <option name="height" value="735" />
@@ -162,6 +141,17 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Origin_Rofl" type="58d84e3e:PackageViewProjectNode" />
+              <item name="legion" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,17 +163,6 @@
               <item name="Origin_Rofl" type="b2602c69:ProjectViewProjectNode" />
               <item name="Origin_Rofl" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Origin_Rofl" type="58d84e3e:PackageViewProjectNode" />
-              <item name="legion" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -322,7 +301,8 @@
       <workItem from="1549482204069" duration="5393000" />
       <workItem from="1549611053121" duration="6344000" />
       <workItem from="1549648947910" duration="4515000" />
-      <workItem from="1549699517974" duration="842000" />
+      <workItem from="1549699517974" duration="3870000" />
+      <workItem from="1549953249360" duration="4407000" />
     </task>
     <task id="LOCAL-00001" summary="Казахи сосут">
       <created>1547400553808</created>
@@ -576,17 +556,31 @@
       <option name="project" value="LOCAL" />
       <updated>1549650911766</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Table">
+      <created>1549700390077</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1549700390077</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Table">
+      <created>1549700429446</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1549700429446</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161988000" />
+    <option name="totallyTimeSpent" value="169423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49873096" visible="true" weight="0.13691376" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873096" visible="true" weight="0.13918306" />
       <window_info id="Structure" order="1" sideWeight="0.50126904" side_tool="true" weight="0.20415778" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -595,7 +589,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.18087319" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.18003273" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3747954" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -793,30 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BookTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/save.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="method#save_table#0;class#save#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="93" column="63" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/IntPredicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -845,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/leonid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/print.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -864,41 +827,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI_1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
+        <state relative-caret-position="421">
           <caret line="47" column="66" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/calc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2832">
-          <caret line="348" column="31" selection-start-line="348" selection-start-column="31" selection-end-line="348" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#calc#0;class#calc#0" />
-            <element signature="method#findSumWithoutUsingStream#0;class#calc#0" />
-            <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
-            <element signature="method#label#0;class#calc#0" />
-            <element signature="method#calc1#0;class#calc#0" />
-            <element signature="method#finalcalc#0;class#calc#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,6 +836,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BookTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+          <folding>
+            <element signature="method#open#0;class#Main#0" />
+            <element signature="method#connection_execute#0;class#Main#0" />
+            <element signature="method#connection_Query#0;class#Main#0" />
+            <element signature="method#connection_Update#0;class#Main#0" />
+            <element signature="method#close#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/save.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+          <folding>
+            <element signature="method#save_table#0;class#save#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/calc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#calc#0;class#calc#0" />
+            <element signature="method#findSumWithoutUsingStream#0;class#calc#0" />
+            <element signature="method#findAverageWithoutUsingStream#0;class#calc#0" />
+            <element signature="method#label#0;class#calc#0" />
+            <element signature="method#calc1#0;class#calc#0" />
+            <element signature="method#label2#0;class#calc#0" />
+            <element signature="method#finalcalc#0;class#calc#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/leonid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="147" column="39" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
         </state>
       </provider>
     </entry>

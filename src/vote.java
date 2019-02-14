@@ -43,12 +43,11 @@ public class vote {
             }
         });
         fileMenu.add(openItem);
-        JMenuItem helpFileItem = new JMenuItem("Помощь");
-        fileMenu.add(helpFileItem);
 
         fileMenu.addSeparator();
         JMenuItem closeAllItem = new JMenuItem("Помощь");
-            String finalName1 = name;
+
+        String finalName1 = name;
             closeAllItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -15,6 +15,8 @@ class leonid  {
     static Dimension size = kit.getScreenSize();
     public static void main(String[][] tabled, String names1, String teachName, String trim){
         File och = new File("Отчет.xls");
+        JLabel lable = new JLabel();
+        lable.setVisible(false);
         vote vale = new vote();
         boolean exists = och.exists();
         JFrame frame = new JFrame ("Legion");
@@ -56,14 +58,18 @@ class leonid  {
         JButton jbt = new JButton("Сформировать отчет");
         JButton jbt1 = new JButton("Назад");
         calc finalCalc = calc1;
+
         jbt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                lable.setVisible(true);
                 try {
                     save1.update_table(tabled);
                     finalCalc.finalcalc(tabled,names1,teachName,trim,names);
+
                     if(exists){
                         jbt.setBackground(Color.green);
+                        lable.setText("Отчет успешно сформирован");
                     }else och.createNewFile();
                 } catch (IOException | SQLException e1) {
                     e1.printStackTrace();
@@ -81,6 +87,7 @@ class leonid  {
                 }
             }
         });
+
         grid1.add (jbt1);
         grid1.add (jbt);
         JPanel flow = new JPanel(new FlowLayout(FlowLayout.RIGHT));
@@ -138,6 +145,7 @@ class leonid  {
 
             }
         });
+        bookTableScrollPane.add(lable);
         frame.setVisible(true);
         timer1.start();
         frame.add(bookTableScrollPane);

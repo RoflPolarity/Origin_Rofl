@@ -343,12 +343,17 @@ class calc {
                     row = sh2.createRow(13);
                     cell = row.createCell(0);
                     cell.setCellValue("% качества");
-                    float present;
+                    double present; String formatedPersent;
+                    double sum; double del;
                     for (int z =1;q<main.length;z++){
                         cell = row.createCell(z);
                         //System.out.println((predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]));
-                    present = (predmet1[q][0]+predmet1[q][1])*100/(predmet1[i][0]+predmet1[i][1]+predmet1[i][2]+predmet1[i][3]);
-                    cell.setCellValue(present+"%");
+                        sum = predmet1[q][0]+predmet1[q][1];
+                        del = predmet1[q][0]+predmet1[q][1]+predmet1[q][2]+predmet1[q][3];
+                        present = sum/del*100;
+                        System.out.println(present);
+                        formatedPersent = String.format("%.2f",present);
+                    cell.setCellValue(formatedPersent+"%");
                     q++;
                 }
                     //System.out.println(predmet1[i][0] + " " + predmet1[i][1] + " " + predmet1[i][2] + " " + predmet1[i][3]);
