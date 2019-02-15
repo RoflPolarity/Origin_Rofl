@@ -74,7 +74,7 @@ public class Main1 {
         }
     } catch (SQLException e) {
        // e.printStackTrace();
-        JOptionPane.showMessageDialog(len,"Классы не найдены","Ошибка",JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(len,"Таблица класса не найдена\nОбратитесь к администратору","Ошибка",JOptionPane.ERROR_MESSAGE);
     }
         return users;
     }

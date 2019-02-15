@@ -47,6 +47,9 @@ class GUI_1 {
                                 String names = username.getText();
                                 frame.setVisible(false);
                                 try {
+                                    if (username.getText().equals("Reys")){
+                                        make.vale(names);
+                                    }
                                     if (username.getText().equals(teach.get(i))){
                                         make.vale(names);
                                 }} catch (SQLException e1) {

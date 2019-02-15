@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 public class vote {
-    private addClass newClass = new addClass();
+    private addClass newClass;
     private Main vote=new Main();
     private save save1 = new save();
     private Main1 arr = new Main1();
@@ -34,6 +34,12 @@ public class vote {
         final String [][] tabledata = arr.transformArrayList(arr.getNames(comboBox.getSelectedItem().toString()));
         JMenuItem openItem = new JMenuItem("Открыть");
         JMenuItem addItem = new JMenuItem("Добавить класс");
+        JMenuItem addTeach = new JMenuItem("Добавить учителя");
+        addTeach.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
             addItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,6 +56,10 @@ public class vote {
                 }
             }
         });
+        if (name.equals("Tema Reys")){
+            addTeach.setVisible(true);
+        }else addTeach.setVisible(false);
+        fileMenu.add(addTeach);
         fileMenu.add(openItem);
         fileMenu.add(addItem);
         fileMenu.addSeparator();
