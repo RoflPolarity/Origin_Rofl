@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 public class vote {
+    private addClass newClass = new addClass();
     private Main vote=new Main();
     private save save1 = new save();
     private Main1 arr = new Main1();
@@ -30,13 +31,13 @@ public class vote {
             JComboBox comboBox1 = new JComboBox(items);
             panel.add(comboBox1);
             String finalName = name;
-        final String [][] tabledata = arr.transformArrayList(arr.getNames());
+        final String [][] tabledata = arr.transformArrayList(arr.getNames(comboBox.getSelectedItem().toString()));
         JMenuItem openItem = new JMenuItem("Открыть");
         JMenuItem addItem = new JMenuItem("Добавить класс");
-        addItem.addActionListener(new ActionListener() {
+            addItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            //Добавить действие на кнопку
+            newClass.addClasses(finalName);
             }
         });
         openItem.addActionListener(new ActionListener() {
@@ -50,7 +51,7 @@ public class vote {
             }
         });
         fileMenu.add(openItem);
-
+        fileMenu.add(addItem);
         fileMenu.addSeparator();
         JMenuItem closeAllItem = new JMenuItem("Помощь");
 

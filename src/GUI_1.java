@@ -27,16 +27,15 @@ class GUI_1 {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.add(panel);
-        buttonColor();
         panel.setVisible(true);
         panel.add(name);
         name.setVisible(true);
         panel.add(username);
         panel.add(button_a);
         frame.pack();
+        names();buttonColor();
         frame.setBounds(size.width / 2 - 250, size.height / 2 - 150, 250, 150);
         username.setBackground(Color.lightGray);
-        names();
         button_a.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,10 +50,8 @@ class GUI_1 {
                                     if (username.getText().equals(teach.get(i))){
                                         make.vale(names);
                                 }} catch (SQLException e1) {
-                                    e1.printStackTrace();
+                                    System.out.println("Введеное вами имя не найдено (");
                                 }
-                            } else {
-                                System.out.println("Введеное вами имя не найдено (");
                             }
                     }
                         }

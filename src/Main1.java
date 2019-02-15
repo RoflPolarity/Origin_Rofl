@@ -1,8 +1,10 @@
 
+import javax.swing.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 public class Main1 {
+    leonid len = new leonid();
     static class User {
         private String name;
         private String profile;
@@ -38,11 +40,12 @@ public class Main1 {
         }
 
     }
-    public static void main(String[] args) {
+    public static void main(String[] args,String className) {
         Main1 m = new Main1();
-        List<User> users = m.getNames();
+        List<User> users = m.getNames(className);
         String[][] transformedUsers = m.transformArrayList(users);
         prettyPrintMatrix(transformedUsers);
+
     }
 
     public static void prettyPrintMatrix(String [][] matrix) {
@@ -54,21 +57,24 @@ public class Main1 {
         }
     }
 
-    public List<User> getNames() {
+    public List<User> getNames(String clasName) {
         Main prog = new Main();
         List<User> users = new ArrayList();
         try {
-            String query = "SELECT id, Имя, Фамилия, Отчество, Факультет FROM people ORDER BY Фамилия";
+            String query = "SELECT ФИО FROM '" + clasName + "' ORDER BY id";
             ResultSet rs = prog.connection_Query(query);
         while (rs.next()){
-            String a = rs.getString("Фамилия");
-            String b = rs.getString("Имя");
-            String c = rs.getString("Отчество");
+            String FIO1 = rs.getString("ФИО");
+            String [] FIO = FIO1.split(" ");
+            String a = FIO[0];
+            String b = FIO[1];
+            String c = FIO[2];
             User sample = new User(a + " " + b + " " + c,"");
             users.add(sample);
         }
     } catch (SQLException e) {
-        e.printStackTrace();
+       // e.printStackTrace();
+        JOptionPane.showMessageDialog(len,"Классы не найдены","Ошибка",JOptionPane.ERROR_MESSAGE);
     }
         return users;
     }
